@@ -1,0 +1,22 @@
+:root {
+  /* PROVISIONAL study palette: replace ONLY after sampling the supplied original logo. */
+  --pg-green-primary: #173d2a;
+  --pg-green-secondary: #42734b;
+  --pg-green-leaf: #b7d598;
+  --pg-green-light: #e2e9dc;
+  --pg-ink: #202720;
+  --pg-paper: #f5f5f0;
+  --pg-white: #ffffff;
+  --pg-muted: #546052;
+  --pg-line: #dce0d7;
+  --pg-surface-dark: #141a15;
+  --pg-surface-light: #ffffff;
+  --pg-text-primary: #202720;
+  --pg-radius: 24px;
+  --pg-radius-sm: 12px;
+  --pg-font-display:
+    "Inter", Arial, sans-serif; /* Brutel pending licensed files */
+  --pg-font-body: "Inter", Arial, sans-serif;
+  --pg-duration: 240ms;
+  --pg-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

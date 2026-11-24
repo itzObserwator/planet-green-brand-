@@ -1,0 +1,7 @@
+{
+  "tool": "Built-in image_gen",
+  "asset": "planet-green-held-phone-brand.png",
+  "display": "planet-green-held-phone-brand.webp",
+  "reference": "Existing handheld mockup and corrected Planet Green interface screenshot.",
+  "prompt": "Use case: precise-object-edit. Image 1 is the target: the existing photorealistic hand holding a Planet Green phone. Image 2 is the exact updated phone-screen content to insert. Change ONLY the phone display to faithfully match Image 2, replacing the previous notes-app text entirely. Keep Image 1's phone proportions, black frame, original hand pose, skin detail, perspective, scale, lighting and transparent background exactly unchanged. The new display must use the original Planet Green logo, green leaf background, plain Outfit typography, existing engraved seed illustration, green glass cards, and these exact texts from Image 2: 'Move to Nature.'; 'Communities'; 'Philosophy'; 'Indulge. Involve. Impact.'; 'Seed'; 'Our philosophy'; 'Creating communities for nature to live on.'; 'Move to Nature.'. No AI assistant, chat, notes, Field notes or Green Notes text. Preserve readable letters and the exact branded UI layout shown in Image 2. No pink or purple. Match the screen's real glass perspective naturally, without changing any hand or device geometry. Retain genuine alpha transparency outside the cutout."
+}

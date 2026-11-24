@@ -1,0 +1,195 @@
+/* Clear, softly refractive glass. Imagery supplies the colour, rather than an opaque green fill. */
+:root {
+  --pg-liquid-blur: 8px;
+  --pg-liquid-saturation: 1.15;
+  --pg-liquid-radius: 38px;
+  --pg-liquid-edge: rgb(238 248 223 / 0.32);
+}
+:root .liquid-glass.liquid-glass {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid var(--pg-liquid-edge);
+  border-radius: var(--liquid-radius, var(--pg-liquid-radius));
+  background: var(--glass-tint, rgb(32 49 24 / 0.15));
+  -webkit-backdrop-filter: blur(var(--liquid-blur, var(--pg-liquid-blur)))
+    saturate(var(--pg-liquid-saturation));
+  backdrop-filter: blur(var(--liquid-blur, var(--pg-liquid-blur)))
+    saturate(var(--pg-liquid-saturation));
+  background-clip: padding-box;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.18),
+    0 16px 32px -18px rgb(4 20 9 / 0.28);
+  color: white;
+}
+/* Restore the previous softly magnified backdrop treatment. */
+:root .liquid-glass.liquid-glass::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border-radius: inherit;
+  background-image:
+    linear-gradient(rgb(13 32 15 / 0.08), rgb(13 32 15 / 0.12)),
+    var(--liquid-scene, none);
+  background-size: auto, var(--liquid-scene-scale, auto 190%);
+  background-position: center, var(--liquid-scene-position, 50% 100%);
+  background-repeat: no-repeat;
+  filter: blur(var(--liquid-refraction-blur, 5px)) saturate(1.08);
+  opacity: var(--liquid-refraction-opacity, 0.68);
+  pointer-events: none;
+  z-index: -1;
+}
+/* A single fine edge, rather than a luminous bevel. */
+:root .liquid-glass.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 0.7px;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgb(255 255 255 / 0.42),
+    rgb(255 255 255 / 0.02) 40%,
+    rgb(255 255 255 / 0.05) 70%,
+    rgb(239 255 221 / 0.2)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+:root .liquid-glass.liquid-glass > .brand-logo {
+  position: relative;
+  z-index: 1;
+  object-fit: contain;
+}
+:root .liquid-glass.liquid-glass .glass-button {
+  border-color: rgb(255 255 255 / 0.28);
+  background: rgb(255 255 255 / 0.08);
+  color: white;
+  box-shadow: none;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+:root .liquid-glass.liquid-glass .glass-button:hover {
+  background: rgb(255 255 255 / 0.14);
+}
+:root .liquid-glass.glass-hover:hover {
+  background-color: rgb(32 49 24 / 0.2);
+}
+:root .liquid-glass.terrain-philosophy-card.is-active {
+  border-color: rgb(242 255 222 / 0.65);
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.22),
+    0 18px 35px -18px rgb(4 20 9 / 0.35);
+}
+.terrain-hero,
+.terrain-philosophy,
+.library-landscape-hero,
+.collection-hero-art,
+.scene-canvas {
+  --liquid-scene: url("/imagery/rolling-landscape-v2.webp");
+}
+.terrain-surface,
+.surface-scene {
+  --liquid-scene: url("/imagery/macro.webp");
+  --liquid-scene-position: 55% 60%;
+}
+.library-preview {
+  --liquid-scene: var(--library-image, none);
+}
+.signage-scene {
+  --liquid-scene: url("/imagery/forest.webp");
+}
+:root .liquid-glass.library-navbar {
+  --liquid-radius: 22px;
+}
+:root .liquid-glass.terrain-surface-glass {
+  --liquid-radius: 28px;
+  --glass-tint: rgb(246 250 241 / 0.78);
+  --liquid-refraction-opacity: 0.2;
+  --liquid-fallback: #f5f8f1;
+  color: #102e1b;
+}
+:root .liquid-glass.signage {
+  --liquid-radius: 42px;
+}
+:root .liquid-glass.scene-placeholder {
+  --liquid-radius: 28px;
+}
+
+:root .library-landscape .liquid-glass.liquid-control {
+  --liquid-radius: 999px;
+  --liquid-blur: 8px;
+  color: white;
+}
+:root .library-landscape .liquid-glass.glass-button-secondary {
+  --glass-tint: rgb(16 37 20 / 0.25);
+}
+:root .library-landscape .liquid-glass.glass-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+/* Documentation dialogs use a light reading surface. */
+:root .liquid-glass.liquid-paper {
+  --liquid-radius: 30px;
+  background: rgb(246 250 241 / 0.93);
+  color: #1e1e1e;
+  border-color: rgb(255 255 255 / 0.6);
+  box-shadow: 0 25px 70px rgb(8 28 15 / 0.2);
+}
+:root .liquid-glass.liquid-paper::after {
+  display: none;
+}
+:root .liquid-glass.liquid-paper .glass-button {
+  color: #1e1e1e;
+  background: rgb(255 255 255 / 0.75);
+  border-color: #bfceb4;
+}
+:root .liquid-glass.liquid-paper .fine-print {
+  color: #4b5a43;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  :root .liquid-glass.liquid-glass {
+    background: var(--liquid-fallback, #24492f);
+  }
+  :root .liquid-glass.liquid-glass::after {
+    display: none;
+  }
+  :root .liquid-glass.liquid-paper {
+    background: #f5f8f1;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root .liquid-glass.liquid-glass {
+    background: var(--liquid-fallback, #24492f);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  :root .liquid-glass.liquid-glass::after {
+    display: none;
+  }
+  :root .liquid-glass.liquid-paper {
+    background: #f5f8f1;
+  }
+}
+@media (forced-colors: active) {
+  :root .liquid-glass.liquid-glass {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  :root .liquid-glass.liquid-glass::before,
+  :root .liquid-glass.liquid-glass::after {
+    display: none;
+  }
+}

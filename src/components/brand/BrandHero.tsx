@@ -58,8 +58,8 @@ export function BrandHero() {
           <span className="heading-period">.</span>
         </h1>
         <p>
-          Sustainable communities, natural farming
-          <br className="desktop-break" /> and a healthier way of living.
+          Natural farming, nature-connected real estate
+          <br className="desktop-break" /> for urban Indian families.
         </p>
         <Link className="button light" href="#purpose">
           Discover our world <ArrowDown size={17} />

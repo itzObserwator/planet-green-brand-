@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ArrowDownToLine } from "lucide-react";
+import { NatureElements } from "@/components/brand/NatureElements";
 import { SectionHeading } from "@/components/brand/SectionHeading";
 import {
   ContourLines,
@@ -22,8 +23,10 @@ export function GraphicElements() {
   return (
     <section id="graphics" className="brand-section">
       <SectionHeading number="08" title="The shape of things">
-        An adaptable graphic language, inspired by nature.
+        Natural textures, restrained patterns and photography of land, soil and
+        life.
       </SectionHeading>
+      <NatureElements />
       <div className="graphics-controls">
         <span className="status-tag">
           Concept graphics · not derived from approved logo
@@ -64,7 +67,7 @@ export function GraphicElements() {
               ) : i === 2 ? (
                 <ContourLines opacity={opacity / 100} />
               ) : i === 3 ? (
-                <NatureMask src="/imagery/texture.webp" />
+                <NatureMask src="/imagery/macro.webp" />
               ) : (
                 <GradientOverlay opacity={opacity / 100} />
               )}

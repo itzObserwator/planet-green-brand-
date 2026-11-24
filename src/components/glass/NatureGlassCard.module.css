@@ -1,0 +1,412 @@
+.card {
+  --glass-shadow: #193b2870;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 590px;
+  padding: 32px 22px 18px;
+  border: 1px solid #f3ffe5c9;
+  border-radius: 64px;
+  background: #527d45;
+  color: #172e20;
+  box-shadow:
+    inset 0 1px 1px #ffffffd9,
+    inset 0 -1px 2px #b5d5a17a,
+    0 25px 55px #142b1c26;
+  font-family: "Outfit", Arial, sans-serif;
+  backdrop-filter: blur(35px) saturate(1.2);
+  container-type: inline-size;
+}
+.scenery {
+  z-index: -4;
+  object-fit: cover;
+  filter: blur(28px);
+  transform: scale(1.16);
+  opacity: 0.6;
+}
+.refraction {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background:
+    radial-gradient(ellipse at 12% 8%, #b5d5a1e8, transparent 54%),
+    radial-gradient(ellipse at 91% 8%, #50ad47b5, transparent 55%),
+    radial-gradient(ellipse at 65% 78%, #e8f0e1d9, transparent 63%),
+    linear-gradient(120deg, #156b3770, #b5d5a170 45%, #156b3760);
+  backdrop-filter: blur(30px);
+}
+.highlight {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  border-radius: inherit;
+  background: linear-gradient(
+    155deg,
+    #ffffff3d,
+    transparent 34%,
+    #ffffff0d 70%,
+    #f3ffe524
+  );
+  box-shadow: inset 0 2px 1px #ffffff9e;
+  pointer-events: none;
+}
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 0 9px 0 20px;
+}
+.card .top h3 {
+  font-family: inherit;
+  font-size: clamp(25px, 5.6cqw, 45px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.04em;
+  padding-top: 13px;
+  color: #f3ffe8;
+}
+.expand {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  background: #e8f0e1a6;
+  backdrop-filter: blur(20px);
+  border: 1px solid #ffffff38;
+  border-radius: 50%;
+  color: #1c3a25;
+  transition:
+    background 0.25s,
+    transform 0.3s;
+}
+.expand:hover {
+  background: #f1f8e5d9;
+  transform: scale(1.04);
+}
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin: auto 19px 29px;
+  padding-top: 130px;
+}
+.card .suggestions > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px solid #ffffff17;
+  border-radius: 40px;
+  background: #e8f0e1b8;
+  box-shadow: inset 0 1px 0 #ffffff1a;
+  backdrop-filter: blur(24px);
+  padding: 12px 13px 12px 18px;
+  min-height: 56px;
+  font:
+    400 21px/1.3 "Outfit",
+    Arial,
+    sans-serif;
+  letter-spacing: -0.04em;
+  color: #162d1f;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.suggestions > button:nth-child(1) {
+  flex: 1.35;
+}
+.suggestions > button:nth-child(2) {
+  flex: 1;
+}
+.suggestions > button:nth-child(3) {
+  width: 100%;
+}
+.suggestions > button:hover {
+  background: #f1f8e5e8;
+  transform: translateY(-2px);
+}
+.plus {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #f1f7e5a8;
+  color: #2b4831;
+}
+.action {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  min-height: 106px;
+  width: 100%;
+  padding: 7px 28px 7px 7px;
+  border: 1px solid #ffffff21;
+  border-radius: 64px;
+  background: linear-gradient(115deg, #172a26f2, #223a2be8 55%, #27382be8);
+  backdrop-filter: blur(35px);
+  color: #f6f9f0;
+  text-align: left;
+  box-shadow: inset 0 1px 1px #ffffff12;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.action:hover {
+  background: #163724;
+  transform: translateY(-2px);
+}
+.brandSeed {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  color: #12271a;
+  box-shadow: 0 0 0 1px #ffffff75;
+}
+.action > span:last-child {
+  font:
+    400 27px/1.25 "Outfit",
+    Arial,
+    sans-serif;
+  letter-spacing: -0.025em;
+}
+.field .refraction {
+  background:
+    radial-gradient(ellipse at 20% 10%, #e8f0e1e6, transparent 65%),
+    radial-gradient(ellipse at 90% 20%, #50ad47b8, transparent 65%),
+    linear-gradient(120deg, #b5d5a1aa, #156b3799);
+}
+.mist .refraction {
+  background:
+    radial-gradient(ellipse at 90% 5%, #e8f0e1f2, transparent 65%),
+    radial-gradient(ellipse at 30% 60%, #b5d5a1e0, transparent 60%),
+    linear-gradient(140deg, #156b3799, #e8f0e1ad);
+}
+.compact {
+  min-height: 420px;
+  padding: 22px 16px 14px;
+  border-radius: 42px;
+}
+.compact .top {
+  padding: 0 0 0 9px;
+}
+.compact .top h3 {
+  font-size: clamp(20px, 6cqw, 34px);
+}
+.compact .expand {
+  width: 55px;
+  height: 55px;
+}
+.compact .expand svg {
+  width: 19px;
+}
+.compact .suggestions {
+  padding-top: 75px;
+  gap: 10px;
+  margin: 0 8px 20px;
+  margin-top: auto;
+}
+.compact .suggestions > button {
+  min-height: 44px;
+  font-size: 16px;
+  padding: 9px 10px 9px 13px;
+  gap: 7px;
+}
+.compact .plus {
+  width: 22px;
+  height: 22px;
+}
+.compact .plus svg {
+  width: 13px;
+}
+.compact .action {
+  min-height: 78px;
+  gap: 15px;
+  padding: 5px 18px 5px 5px;
+}
+.compact .brandSeed {
+  width: 66px;
+  height: 66px;
+}
+.compact .brandSeed svg {
+  width: 24px;
+}
+.compact .action > span:last-child {
+  font-size: 20px;
+}
+.modalCopy {
+  font:
+    400 17px/1.65 "Outfit",
+    Arial,
+    sans-serif;
+  color: #435541;
+  max-width: 550px;
+}
+.modalLink {
+  display: inline-flex;
+  margin-top: 25px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  background: #156b37;
+  color: #fff;
+  font:
+    400 14px/1.4 "Outfit",
+    Arial,
+    sans-serif;
+}
+.modalChoices {
+  display: grid;
+  gap: 10px;
+  margin-top: 25px;
+}
+.modalChoices > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 15px 18px;
+  border: 1px solid #d6e1cf;
+  border-radius: 15px;
+  background: #e8f0e1;
+  color: #1c3b26;
+  font:
+    400 15px/1.5 "Outfit",
+    Arial,
+    sans-serif;
+  text-align: left;
+}
+.card button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+.card .expand:focus-visible,
+.card .suggestions > button:focus-visible {
+  outline-color: #163d25;
+}
+.modalLink:focus-visible,
+.modalChoices > button:focus-visible {
+  outline: 3px solid #50ad47;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .card {
+    min-height: 410px;
+    padding: 22px 12px 12px;
+    border-radius: 39px;
+  }
+  .top {
+    padding: 0 3px 0 12px;
+    gap: 10px;
+  }
+  .top h3 {
+    font-size: clamp(21px, 6cqw, 30px);
+    padding-top: 8px;
+  }
+  .expand {
+    width: 52px;
+    height: 52px;
+  }
+  .expand svg {
+    width: 18px;
+  }
+  .suggestions {
+    padding-top: 90px;
+    gap: 9px;
+    margin-inline: 7px;
+    margin-bottom: 19px;
+  }
+  .suggestions > button {
+    font-size: 14px;
+    min-height: 44px;
+    padding: 9px 9px 9px 12px;
+    gap: 6px;
+  }
+  .plus {
+    width: 22px;
+    height: 22px;
+  }
+  .plus svg {
+    width: 13px;
+  }
+  .action {
+    min-height: 78px;
+    gap: 13px;
+    padding: 5px 17px 5px 5px;
+  }
+  .brandSeed {
+    width: 65px;
+    height: 65px;
+  }
+  .brandSeed svg {
+    width: 24px;
+  }
+  .action > span:last-child {
+    font-size: 19px;
+  }
+  .compact {
+    min-height: 370px;
+  }
+  .compact .suggestions {
+    padding-top: 65px;
+  }
+  .compact .suggestions > button {
+    font-size: 14px;
+  }
+  .compact .top h3 {
+    font-size: 25px;
+  }
+  .compact .action > span:last-child {
+    font-size: 19px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card * {
+    transition: none !important;
+  }
+}
+.card .top h3 {
+  font-weight: 500;
+}
+
+.card .top h3 {
+  color: #193b27;
+  letter-spacing: -0.025em;
+}
+/* A brand navigation action, without assistant or text-input cues. */
+.brandSeed > img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.card .action {
+  gap: 20px;
+  text-decoration: none;
+}
+.card .action > span:last-child {
+  font-size: 24px;
+}
+.card a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+.compact .action > span:last-child {
+  font-size: 19px;
+}
+@media (max-width: 700px) {
+  .card .action > span:last-child {
+    font-size: 18px;
+  }
+  .card .action {
+    gap: 13px;
+  }
+}

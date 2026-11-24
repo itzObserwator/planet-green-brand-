@@ -1,0 +1,1283 @@
+.myth-identity {
+  --myth-paper: #f6f6f0;
+  --myth-ink: #1e1e1e;
+  --myth-green: #156b37;
+  --myth-leaf: #b5d5a1;
+  --myth-rule: #b5d5a1;
+  position: relative;
+  isolation: isolate;
+  background: var(--myth-paper);
+  color: var(--myth-ink);
+  font-family: var(--pg-font-body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+body:has(.myth-identity) .site-header.bio-header,
+body:has(.myth-identity) .main-nav.open {
+  background-color: #f6f6f0;
+  background-image: url("/imagery/cultural-story/cotton-paper.webp");
+  background-size: 750px auto;
+  border-color: #b5d5a1;
+}
+body:has(.myth-identity) .main-nav:not(.open) {
+  background: transparent;
+}
+.myth-identity::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/imagery/cultural-story/cotton-paper.webp") repeat;
+  background-size: 750px auto;
+  opacity: 0.48;
+  pointer-events: none;
+}
+.myth-identity :is(h1, h2, h3) {
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.13;
+}
+.myth-identity :is(h1, h2) {
+  font-family: Georgia, "Times New Roman", serif;
+}
+.myth-identity h3 {
+  font-family: var(--pg-font-body);
+}
+.myth-identity em {
+  font-style: normal;
+  color: var(--myth-green);
+}
+.myth-identity a {
+  text-underline-offset: 5px;
+}
+.myth-identity :is(a, button, input, summary, [tabindex]):focus-visible {
+  outline: 2px solid #156b37;
+  outline-offset: 5px;
+}
+.myth-identity button {
+  cursor: pointer;
+}
+.myth-identity .brand-logo {
+  height: auto;
+  object-fit: contain;
+}
+.myth-label {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.myth-link {
+  display: inline-block;
+  font-size: 15px;
+  border-bottom: 1px solid #156b37;
+  margin-top: 24px;
+  padding-bottom: 3px;
+}
+.myth-photo {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+.myth-photo > img {
+  object-fit: cover;
+}
+.myth-ornament {
+  position: absolute;
+  max-width: none;
+  height: auto;
+  width: 500px;
+  color: #156b37;
+  opacity: 0.1;
+  pointer-events: none;
+}
+.myth-arch-frame {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 15px 12px #1e1e1e18);
+}
+.myth-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: 7%;
+  padding: 55px 10% 45px;
+  min-height: 760px;
+  overflow: hidden;
+}
+.myth-hero-art {
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  margin: auto;
+}
+.myth-hero-art > .myth-ornament {
+  width: 160%;
+  top: 8%;
+  left: -30%;
+}
+.myth-hero-art > p {
+  font-size: 12px;
+  margin: 15px -10% 0;
+  text-align: center;
+}
+.myth-hero-copy {
+  padding-bottom: 20px;
+}
+.myth-hero-copy h1 {
+  font-size: clamp(65px, 7.9vw, 128px);
+  line-height: 0.96;
+  margin: 32px 0 28px;
+  letter-spacing: -0.05em;
+}
+.myth-hero-subtitle {
+  font-size: clamp(20px, 2vw, 29px);
+  line-height: 1.4;
+}
+.myth-story-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 42px;
+  border-block: 1px solid #b5d5a1;
+  padding: 20px 6%;
+  font-size: 14px;
+  background: #ffffff38;
+}
+.myth-story-nav a:hover {
+  text-decoration: underline;
+}
+.myth-chapter {
+  position: relative;
+  padding: 95px 9%;
+  overflow: hidden;
+}
+.myth-chapter-intro {
+  position: relative;
+  z-index: 1;
+  max-width: 950px;
+}
+.myth-chapter-intro > .myth-label {
+  margin-bottom: 34px;
+}
+.myth-chapter-intro > h2 {
+  font-size: clamp(37px, 4.2vw, 64px);
+  max-width: 900px;
+}
+.myth-chapter-copy {
+  max-width: 730px;
+  margin-top: 38px;
+}
+.myth-chapter-copy > p + p {
+  margin-top: 23px;
+}
+.myth-identity .myth-context {
+  padding: 0;
+}
+.myth-context > .myth-founder {
+  margin: 65px 9% 80px auto;
+  width: 55%;
+}
+.reference-context-shell {
+  container: reference-context / inline-size;
+  width: 100%;
+}
+.reference-context-panel {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 56.2857cqw;
+  aspect-ratio: 1400 / 788;
+  overflow: hidden;
+  padding: 6.1429cqw 6.2857cqw;
+  background: #f6f6f0;
+  color: #1e1e1e;
+  font-family: var(--pg-font-body);
+}
+.reference-context-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("/imagery/cultural-story/cotton-paper.webp") repeat;
+  background-size: 1000px auto;
+  opacity: 0.78;
+  filter: contrast(1.18);
+}
+.reference-context-content {
+  position: relative;
+  z-index: 1;
+}
+.reference-context-label {
+  margin-bottom: 4.2857cqw;
+  font-size: clamp(14px, 1.7143cqw, 26px);
+  line-height: 1.2;
+  color: #62645e;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.reference-context-panel h2 {
+  font-family: var(--pg-font-body);
+  font-size: clamp(32px, 3.7143cqw, 58px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.reference-context-copy {
+  max-width: 58cqw;
+  margin-top: 4.5cqw;
+  font-size: clamp(20px, 2.2857cqw, 35px);
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+}
+.reference-context-copy > div {
+  margin-top: 2.7cqw;
+}
+.reference-context-panel > .reference-mandala {
+  position: absolute;
+  width: 45.7143cqw;
+  height: auto;
+  right: -16.4286cqw;
+  top: 6.0714cqw;
+  color: #156b37;
+  opacity: 0.115;
+  pointer-events: none;
+}
+.reference-faded-arch {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #156b37;
+  opacity: 0.1;
+}
+.faded-nature-element {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: #156b37;
+  opacity: var(--nature-opacity, 0.12);
+  object-fit: contain;
+  -webkit-mask-image: linear-gradient(#000 65%, #0000 100%);
+  mask-image: linear-gradient(#000 65%, #0000 100%);
+  pointer-events: none;
+}
+.myth-nature-gallery {
+  width: 100%;
+  margin-top: 80px;
+  padding-top: 35px;
+  border-top: 1px solid #b5d5a1;
+  text-align: left;
+}
+.myth-nature-gallery-heading h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  margin-top: 18px;
+}
+.myth-nature-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 42px 35px;
+  margin-top: 30px;
+}
+.myth-nature-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+.myth-nature-gallery .faded-nature-element {
+  --nature-opacity: 0.42;
+  -webkit-mask-image: none;
+  mask-image: none;
+  aspect-ratio: 1;
+  border-bottom: 1px solid #b5d5a1;
+}
+.myth-nature-gallery h4 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 18px 0 8px;
+}
+.myth-nature-gallery figcaption p {
+  font-size: 15px;
+  min-height: 48px;
+}
+.myth-nature-gallery a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.myth-nature-objective {
+  position: absolute;
+  width: 420px;
+  top: 40px;
+  right: -20px;
+  --nature-opacity: 0.1;
+}
+.myth-nature-positioning {
+  position: absolute;
+  width: 600px;
+  top: -50px;
+  right: -110px;
+  --nature-opacity: 0.09;
+}
+.myth-positioning > :not(.faded-nature-element) {
+  position: relative;
+}
+.myth-nature-surfaces {
+  position: absolute;
+  width: 510px;
+  right: -70px;
+  top: -15px;
+  --nature-opacity: 0.1;
+}
+.myth-impact > .myth-nature-impact {
+  position: absolute;
+  width: 440px;
+  height: auto;
+  right: 2%;
+  top: 70px;
+  --nature-opacity: 0.1;
+}
+@media (max-width: 700px) {
+  .myth-nature-gallery {
+    margin-top: 45px;
+  }
+  .myth-nature-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .myth-nature-gallery-heading h3 {
+    font-size: 28px;
+  }
+  .myth-nature-gallery figcaption p {
+    min-height: 64px;
+  }
+  .myth-nature-objective {
+    width: 300px;
+    right: -150px;
+    top: 60px;
+    --nature-opacity: 0.07;
+  }
+  .myth-nature-positioning {
+    width: 400px;
+    right: -160px;
+    --nature-opacity: 0.06;
+  }
+  .myth-nature-surfaces {
+    width: 350px;
+    right: -160px;
+    --nature-opacity: 0.07;
+  }
+  .myth-impact > .myth-nature-impact {
+    width: 310px;
+    right: -140px;
+    top: 100px;
+    --nature-opacity: 0.07;
+  }
+}
+@media (forced-colors: active) {
+  .faded-nature-element[aria-hidden="true"] {
+    display: none;
+  }
+  .myth-nature-gallery .faded-nature-element {
+    color: CanvasText;
+    opacity: 1;
+  }
+}
+.myth-founder {
+  position: relative;
+  margin: 80px 0 0 auto;
+  width: 60%;
+  padding: 35px 0 0 35px;
+  border-top: 1px solid #b5d5a1;
+  border-left: 1px solid #b5d5a1;
+}
+.myth-founder h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 35px;
+  margin: 20px 0 25px;
+}
+.myth-founder > p:not(.myth-label) {
+  font-size: 16px;
+  max-width: 660px;
+}
+.myth-founder a {
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 24px;
+  text-decoration: underline;
+}
+.myth-objective-arch {
+  width: 350px;
+  right: 7%;
+  top: 80px;
+  opacity: 0.07;
+}
+.myth-objective .myth-chapter-intro {
+  max-width: 820px;
+}
+.myth-practices {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 36px;
+  margin-top: 65px;
+  padding-top: 32px;
+  border-top: 1px solid #b5d5a1;
+}
+.myth-practices h3 {
+  font-size: 26px;
+  margin: 18px 0 16px;
+}
+.myth-practices p {
+  font-size: 16px;
+}
+.myth-brand-idea {
+  min-height: 650px;
+  padding-block: 90px 110px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.myth-brand-idea > .myth-ornament {
+  width: 470px;
+  height: 480px;
+  inset: 20px 0 auto;
+  margin-inline: auto;
+  opacity: 0.055;
+}
+.myth-brand-idea > :not(.myth-ornament) {
+  position: relative;
+}
+.myth-brand-idea h2 {
+  font-size: clamp(45px, 5.5vw, 85px);
+  line-height: 1.15;
+  margin: 55px 0 35px;
+  max-width: 1100px;
+}
+.myth-brand-idea > p:not(.myth-label) {
+  max-width: 820px;
+  font-size: 22px;
+}
+.myth-brand-idea > .myth-idea-foot {
+  font-size: 14px !important;
+  margin-top: 38px;
+}
+.myth-cultural-story {
+  display: grid;
+  grid-template-columns: 0.85fr 1.25fr;
+  gap: 45px 8%;
+  align-items: center;
+}
+.myth-cultural-art {
+  max-width: 350px;
+  width: 100%;
+  margin: auto;
+}
+.myth-cultural-art > span {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.myth-cultural-copy h2 {
+  font-size: clamp(35px, 3.9vw, 60px);
+  margin-top: 25px;
+}
+.myth-reference-tabs {
+  display: flex;
+  gap: 28px;
+  margin: 32px 0;
+  border-bottom: 1px solid #b5d5a1;
+}
+.myth-reference-tabs button {
+  background: transparent;
+  padding: 10px 0 12px;
+  border-bottom: 2px solid transparent;
+  font-size: 17px;
+  min-height: 44px;
+}
+.myth-reference-tabs button[aria-selected="true"] {
+  border-color: #156b37;
+  color: #156b37;
+}
+.myth-cultural-copy [role="tabpanel"] h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.myth-cultural-copy [role="tabpanel"] a {
+  display: inline-block;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 20px;
+}
+.myth-bridge-copy {
+  margin-top: 28px;
+  font-size: 16px;
+}
+.myth-philosophy {
+  grid-column: 1/-1;
+  border-block: 1px solid #b5d5a1;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+.myth-philosophy > div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 22px 0;
+}
+.myth-identity .myth-philosophy .terrain-philosophy-card {
+  position: static;
+  display: block;
+  width: auto;
+  min-height: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 9px 22px;
+  border: 1px solid #156b37;
+  border-radius: 0;
+  background: transparent;
+  color: #156b37;
+  box-shadow: none;
+  font-size: 16px;
+  transform: none;
+}
+.myth-identity .myth-philosophy .terrain-philosophy-card[aria-pressed="true"] {
+  background: #156b37;
+  color: white;
+}
+.myth-step-controls {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 24px;
+  font-size: 14px;
+}
+.myth-step-controls button {
+  background: transparent;
+  min-height: 40px;
+  border-bottom: 1px solid #156b37;
+}
+.myth-positioning {
+  display: grid;
+  grid-template-columns: 0.8fr 1.3fr;
+  gap: 65px 8%;
+  align-items: center;
+}
+.myth-position-art {
+  max-width: 330px;
+  width: 100%;
+  margin: auto;
+  opacity: 0.8;
+}
+.myth-position-copy .myth-chapter-intro > h2 {
+  font-size: clamp(35px, 3.5vw, 53px);
+}
+.myth-position-copy dl {
+  margin-top: 40px;
+}
+.myth-position-copy dl > div {
+  border-bottom: 1px solid #b5d5a1;
+  padding: 18px 0;
+}
+.myth-position-copy dt {
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+.myth-position-copy dd {
+  font-size: 17px;
+  margin: 0;
+}
+.myth-family {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 45px 55px;
+  padding-top: 20px;
+}
+.myth-family article {
+  border-top: 1px solid #b5d5a1;
+  padding-top: 25px;
+}
+.myth-family h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  margin: 18px 0;
+}
+.myth-family article > p:last-of-type {
+  font-size: 16px;
+}
+.myth-family a {
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 23px;
+  text-decoration: underline;
+}
+.myth-system > .myth-chapter-intro {
+  margin-bottom: 55px;
+}
+.myth-brand-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.myth-brand-board article {
+  position: relative;
+  min-width: 0;
+  padding: 35px;
+  background: #ffffff80;
+  border: 1px solid #b5d5a1;
+}
+.myth-brand-board article > .myth-label {
+  margin-bottom: 24px;
+  font-size: 12px;
+}
+.myth-board-intro h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 36px;
+}
+.myth-board-intro > p:last-of-type {
+  font-size: 16px;
+}
+.myth-mini-rule {
+  height: 1px;
+  background: #b5d5a1;
+  width: 80%;
+  margin: 28px 0;
+}
+.myth-board-primary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 320px;
+}
+.myth-board-primary > .myth-label {
+  align-self: flex-start;
+}
+.myth-board-primary .brand-logo {
+  width: 95%;
+  max-width: 430px;
+}
+.myth-board-primary > span {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  margin-top: 18px;
+}
+.myth-board-variants > div:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 18px;
+}
+.myth-board-variants .brand-logo {
+  width: 100%;
+}
+.myth-board-variants > div:first-of-type > div {
+  padding: 15px;
+  background: #156b37;
+}
+.myth-board-variants .download-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.myth-board-variants .download-group a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.myth-board-reasoning > .myth-ornament {
+  width: 150px;
+  height: 220px;
+  right: 5px;
+  bottom: 0;
+  opacity: 0.08;
+}
+.myth-board-reasoning h3 {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+.myth-board-reasoning > p:last-child {
+  position: relative;
+  font-size: 16px;
+  max-width: 420px;
+}
+.myth-type-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #b5d5a1;
+  margin-top: 45px;
+  background: #ffffff50;
+}
+.myth-type-board article {
+  padding: 32px;
+}
+.myth-type-board article + article {
+  border-left: 1px solid #b5d5a1;
+}
+.myth-type-board article > p:last-child {
+  font-size: 16px;
+}
+.myth-serif-sample {
+  display: block;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 110px;
+  line-height: 1.4;
+}
+.myth-sans-sample {
+  display: block;
+  font-family: var(--pg-font-body);
+  font-size: 110px;
+  line-height: 1.4;
+}
+.myth-type-tester {
+  grid-column: 1/-1;
+  border-top: 1px solid #b5d5a1;
+  padding: 32px;
+}
+.myth-type-tester label {
+  display: grid;
+  gap: 10px;
+  font-size: 14px;
+  max-width: 500px;
+}
+.myth-type-tester input {
+  width: 100%;
+  border: 1px solid #156b37;
+  border-radius: 0;
+  padding: 10px 12px;
+  min-height: 44px;
+  background: #ffffff70;
+}
+.myth-type-tester > p {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4.2vw, 65px);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  margin-top: 35px;
+}
+.myth-colour-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 45px;
+}
+.myth-colour-strip > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+  padding: 23px;
+}
+.myth-colour-strip strong {
+  font-size: 22px;
+  font-weight: 400;
+}
+.myth-colour-strip span {
+  font-size: 14px;
+}
+.myth-surface-study {
+  position: relative;
+  min-height: 530px;
+  display: grid;
+  place-items: center;
+  margin-top: 45px;
+  background: #e8f0e1;
+}
+.myth-surface-study > .myth-photo {
+  width: 55%;
+  height: 420px;
+}
+.myth-glass-pill {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  width: 65%;
+  left: 17.5%;
+  top: 43%;
+  padding: 15px;
+  border: 1px solid #ffffffdc;
+  border-radius: 90px;
+  background: linear-gradient(115deg, #ffffffa6, #ffffff66 52%, #ffffff99);
+  color: #1e1e1e;
+  -webkit-backdrop-filter: blur(24px) saturate(1.1);
+  backdrop-filter: blur(24px) saturate(1.1);
+  box-shadow:
+    inset 0 1px 0 #ffffffcc,
+    inset 0 -1px 0 #ffffff50,
+    0 15px 40px #1e1e1e12;
+}
+.myth-glass-pill > span:first-child {
+  background: white;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+}
+.myth-glass-pill strong {
+  font-size: 23px;
+  font-weight: 400;
+  display: block;
+}
+.myth-glass-pill small {
+  display: block;
+  font-size: 14px;
+}
+.myth-glass-pill > svg {
+  margin-left: auto;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.myth-asset-drawer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #b5d5a1;
+}
+.myth-asset-drawer summary {
+  cursor: pointer;
+  font-size: 16px;
+}
+.myth-asset-drawer > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+.myth-asset-drawer h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.myth-asset-drawer p {
+  font-size: 16px;
+}
+.myth-asset-drawer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+  font-size: 14px;
+  margin-top: 18px;
+}
+.myth-icons > div:last-of-type {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border-block: 1px solid #b5d5a1;
+  margin-top: 45px;
+}
+.myth-icons article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  min-height: 150px;
+  border-right: 1px solid #b5d5a1;
+}
+.myth-icons article:last-child {
+  border-right: 0;
+}
+.myth-icons h3 {
+  font-size: 16px;
+  letter-spacing: 0;
+}
+.myth-identity .myth-applications {
+  padding-top: 40px;
+}
+.myth-identity .applications-editorial {
+  padding: 0;
+}
+.myth-identity .applications-editorial-heading {
+  padding-top: 35px;
+  border-top: 1px solid #b5d5a1;
+}
+.myth-identity .applications-editorial-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 72px);
+}
+.myth-identity .applications-editorial .digital-editorial-stage {
+  border-radius: 4px;
+}
+.myth-impact {
+  min-height: 600px;
+  padding-block: 100px 120px;
+}
+.myth-impact > .myth-ornament {
+  width: 370px;
+  height: 550px;
+  right: 6%;
+  bottom: 20px;
+  opacity: 0.065;
+}
+.myth-impact > :not(.myth-ornament) {
+  position: relative;
+}
+.myth-impact h2 {
+  font-size: clamp(40px, 4.7vw, 70px);
+  margin: 42px 0 30px;
+  max-width: 1000px;
+}
+.myth-impact > p:not(.myth-label) {
+  font-size: 22px;
+}
+.myth-impact-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  color: #156b37;
+  margin: 35px 0;
+}
+.myth-impact > div:last-child {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+.myth-impact a {
+  text-decoration: underline;
+}
+.myth-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 35px 7%;
+  border-top: 1px solid #b5d5a1;
+  font-size: 13px;
+}
+.myth-footer .brand-logo {
+  width: 200px;
+}
+.myth-footer a {
+  text-decoration: underline;
+}
+@media (prefers-reduced-transparency: reduce) {
+  .myth-glass-pill {
+    background: #e8f0e1;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+@media (forced-colors: active) {
+  .myth-ornament {
+    display: none;
+  }
+  .myth-identity::before {
+    display: none;
+  }
+  .myth-glass-pill {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+  }
+}
+@container reference-context (max-width: 700px) {
+  .reference-context-panel {
+    aspect-ratio: auto;
+    min-height: 560px;
+    padding: 45px 7% 60px;
+  }
+  .reference-context-label {
+    font-size: 14px;
+    margin-bottom: 35px;
+  }
+  .reference-context-panel h2 {
+    font-size: 34px;
+  }
+  .reference-context-copy {
+    max-width: 100%;
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .reference-context-copy > div {
+    margin-top: 30px;
+  }
+  .reference-context-panel > .reference-mandala {
+    width: 360px;
+    right: -260px;
+    top: 65px;
+    opacity: 0.07;
+  }
+}
+@media (max-width: 1000px) {
+  .myth-hero {
+    padding-inline: 7%;
+    gap: 5%;
+    min-height: 680px;
+  }
+  .myth-chapter {
+    padding: 80px 7%;
+  }
+  .myth-founder {
+    width: 75%;
+  }
+  .myth-cultural-story,
+  .myth-positioning {
+    gap: 40px 5%;
+  }
+  .myth-brand-board article {
+    padding: 25px;
+  }
+  .myth-glass-pill {
+    width: 80%;
+    left: 10%;
+  }
+  .myth-colour-strip > div {
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 700px) {
+  .myth-identity {
+    font-size: 17px;
+  }
+  .myth-hero {
+    grid-template-columns: 1fr;
+    padding: 35px 7% 45px;
+    gap: 35px;
+    min-height: 0;
+  }
+  .myth-hero-art {
+    max-width: 260px;
+  }
+  .myth-hero-copy {
+    text-align: center;
+    padding-bottom: 0;
+  }
+  .myth-hero-copy h1 {
+    font-size: clamp(65px, 16vw, 95px);
+    margin: 25px 0;
+  }
+  .myth-hero-subtitle {
+    font-size: 22px;
+  }
+  .myth-story-nav {
+    justify-content: flex-start;
+    gap: 12px 22px;
+    font-size: 13px;
+    padding: 18px 7%;
+  }
+  .myth-chapter {
+    padding: 60px 7%;
+  }
+  .myth-chapter-intro > .myth-label {
+    margin-bottom: 25px;
+  }
+  .myth-chapter-intro > h2 {
+    font-size: clamp(34px, 8.5vw, 48px);
+  }
+  .myth-chapter-copy {
+    margin-top: 28px;
+  }
+  .myth-context > .myth-founder {
+    width: 86%;
+    margin: 45px 7% 60px;
+  }
+  .myth-founder {
+    width: 100%;
+    margin-top: 50px;
+    padding-left: 22px;
+  }
+  .myth-founder h3 {
+    font-size: 30px;
+  }
+  .myth-objective-arch {
+    width: 220px;
+    right: -65px;
+    top: 70px;
+  }
+  .myth-practices {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .myth-practices article {
+    display: grid;
+    grid-template-columns: 27px 1fr;
+    gap: 12px;
+  }
+  .myth-practices h3 {
+    margin: 0;
+    font-size: 25px;
+  }
+  .myth-practices p {
+    grid-column: 2;
+  }
+  .myth-brand-idea {
+    min-height: 500px;
+  }
+  .myth-brand-idea > .myth-ornament {
+    width: 100%;
+    height: 430px;
+  }
+  .myth-brand-idea h2 {
+    font-size: clamp(37px, 9vw, 55px);
+    margin: 35px 0 28px;
+  }
+  .myth-brand-idea > p:not(.myth-label) {
+    font-size: 19px;
+  }
+  .myth-cultural-story {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .myth-cultural-art {
+    max-width: 260px;
+  }
+  .myth-cultural-copy h2 {
+    font-size: 37px;
+  }
+  .myth-philosophy {
+    grid-column: auto;
+    margin-top: 0;
+  }
+  .myth-identity .myth-philosophy .terrain-philosophy-card {
+    font-size: 14px;
+    padding: 9px 14px;
+  }
+  .myth-positioning {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .myth-position-art {
+    max-width: 250px;
+    opacity: 0.9;
+  }
+  .myth-position-copy dt {
+    font-size: 22px;
+  }
+  .myth-family {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .myth-family h3 {
+    font-size: 30px;
+  }
+  .myth-brand-board {
+    grid-template-columns: 1fr;
+  }
+  .myth-board-intro h3 {
+    font-size: 32px;
+  }
+  .myth-board-primary {
+    min-height: 250px;
+  }
+  .myth-board-primary .brand-logo {
+    max-width: 300px;
+  }
+  .myth-type-board {
+    grid-template-columns: 1fr;
+  }
+  .myth-type-board article + article {
+    border-left: 0;
+    border-top: 1px solid #b5d5a1;
+  }
+  .myth-type-tester {
+    grid-column: auto;
+    padding: 25px;
+  }
+  .myth-type-board article {
+    padding: 25px;
+  }
+  .myth-colour-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .myth-colour-strip > div {
+    min-height: 180px;
+  }
+  .myth-colour-strip strong {
+    font-size: 20px;
+  }
+  .myth-colour-strip span {
+    font-size: 13px;
+  }
+  .myth-surface-study {
+    min-height: 380px;
+  }
+  .myth-surface-study > .myth-photo {
+    width: 70%;
+    height: 300px;
+  }
+  .myth-glass-pill {
+    width: 92%;
+    left: 4%;
+    padding: 10px;
+    gap: 12px;
+  }
+  .myth-glass-pill > span:first-child {
+    width: 56px;
+    height: 56px;
+  }
+  .myth-glass-pill > span:first-child img {
+    width: 50px;
+    height: 50px;
+  }
+  .myth-glass-pill strong {
+    font-size: 18px;
+  }
+  .myth-glass-pill small {
+    font-size: 12px;
+  }
+  .myth-glass-pill > svg {
+    margin-right: 3px;
+    width: 18px;
+  }
+  .myth-asset-drawer > div {
+    grid-template-columns: 1fr;
+  }
+  .myth-icons > div:last-of-type {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .myth-icons article {
+    min-height: 125px;
+  }
+  .myth-icons article:nth-child(3n) {
+    border-right: 0;
+  }
+  .myth-icons article:nth-child(-n + 3) {
+    border-bottom: 1px solid #b5d5a1;
+  }
+  .myth-icons h3 {
+    font-size: 14px;
+  }
+  .myth-impact {
+    min-height: 0;
+  }
+  .myth-impact h2 {
+    font-size: 37px;
+    margin-top: 30px;
+  }
+  .myth-impact > .myth-ornament {
+    width: 250px;
+    height: 400px;
+    right: -70px;
+  }
+  .myth-impact > p:not(.myth-label) {
+    font-size: 19px;
+  }
+  .myth-impact-words {
+    font-size: 30px;
+    gap: 15px;
+  }
+  .myth-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 7%;
+  }
+}

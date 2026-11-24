@@ -3,7 +3,7 @@ export const componentDocs = [
     name: "GlassCard",
     category: "Surfaces",
     description:
-      "A configurable frosted surface for dark photographic contexts.",
+      "A configurable liquid-glass surface with blurred scenery, luminous edges and layered highlights.",
     props: "hover?: boolean · tint?: string · HTMLAttributes<HTMLDivElement>",
     code: '<GlassCard hover tint="rgb(255 255 255 / .12)">\n  <h3>Space to grow.</h3>\n</GlassCard>',
     path: "@/components/glass/GlassUI",
@@ -12,17 +12,18 @@ export const componentDocs = [
     name: "GlassButton",
     category: "Surfaces",
     description:
-      "Primary, secondary and icon controls with focus, hover and disabled states.",
+      "Liquid-glass controls with primary, secondary, focus, hover and disabled states.",
     props: "variant?: primary | secondary | icon · ButtonHTMLAttributes",
-    code: '<GlassButton variant="primary" onClick={openPreview}>\n  Explore <ArrowRight size={16} />\n</GlassButton>',
+    code: '<GlassButton className="liquid-glass liquid-control" variant="primary" onClick={openPreview}>\n  Explore <ArrowRight size={16} />\n</GlassButton>',
     path: "@/components/glass/GlassUI",
   },
   {
     name: "GlassBadge",
     category: "Surfaces",
-    description: "A compact frosted label with optional icon support.",
+    description:
+      "A compact liquid-glass label with optional icon support and a luminous rim.",
     props: "children: ReactNode · HTMLAttributes<HTMLSpanElement>",
-    code: "<GlassBadge>\n  <Leaf size={14} /> Rooted in nature\n</GlassBadge>",
+    code: '<GlassBadge className="liquid-glass liquid-control">\n  <Leaf size={14} /> Rooted in nature\n</GlassBadge>',
     path: "@/components/glass/GlassUI",
   },
   {
@@ -31,8 +32,8 @@ export const componentDocs = [
     description:
       "Native modal dialog with keyboard containment, Escape dismissal and focus restoration.",
     props:
-      "open: boolean · onClose: () => void · title: string · children: ReactNode",
-    code: '<GlassModal open={open} onClose={() => setOpen(false)}\n  title="A little room to breathe">\n  <p>Meaningful content, naturally.</p>\n</GlassModal>',
+      "open: boolean · onClose: () => void · title: string · children: ReactNode · className?: string",
+    code: '<GlassModal className="liquid-glass liquid-paper" open={open} onClose={() => setOpen(false)}\n  title="A little room to breathe">\n  <p>Meaningful content, naturally.</p>\n</GlassModal>',
     path: "@/components/glass/GlassUI",
   },
   {
@@ -42,7 +43,7 @@ export const componentDocs = [
       "A Next Image composition with adjustable environmental overlay and background blur.",
     props:
       "src: string · alt: string · overlay?: number · blur?: number · priority?: boolean",
-    code: '<GlassImageFrame src="/imagery/forest.webp"\n  alt="Light through a forest" overlay={0.3} blur={0}>\n  <h3>Room to breathe.</h3>\n</GlassImageFrame>',
+    code: '<GlassImageFrame src="/imagery/macro.webp"\n  alt="Fresh green plant growth" overlay={0.3} blur={0}>\n  <h3>Room to breathe.</h3>\n</GlassImageFrame>',
     path: "@/components/glass/GlassUI",
   },
   {
@@ -59,7 +60,7 @@ export const componentDocs = [
     name: "Typography",
     category: "Foundations",
     description:
-      "Ten fluid styles built on the central scale. Inter is the documented Brutel fallback.",
+      "Ten fluid styles built on the central scale. Outfit is used for display, body and interface text.",
     props:
       "variant?: display-xl | display-lg | heading-h1 | heading-h2 | heading-h3 | body-lg | body-regular | caption | overline | button-label · as?: ElementType",
     code: '<Typography as="h1" variant="display-xl">\n  Move to Nature\n</Typography>',
@@ -69,9 +70,9 @@ export const componentDocs = [
     name: "BrandLogo",
     category: "Foundations",
     description:
-      "Renders the exact approved asset when configured. Otherwise displays a labelled text placeholder.",
+      "Renders original full-colour SVG artwork without alteration. Uses the original light-letter variant for dark contexts. Unavailable standalone variants remain labelled.",
     props:
-      "variant?: primary | monochrome | symbol · compact?: boolean · className?: string",
+      "variant?: primary | monochrome | symbol · tone?: light | dark · compact?: boolean · className?: string",
     code: '<BrandLogo variant="primary" compact />',
     path: "@/components/brand/BrandLogo",
   },
@@ -106,7 +107,7 @@ export const componentDocs = [
     name: "GradientOverlay",
     category: "Graphics",
     description:
-      "An environmental gradient that uses shared provisional palette variables.",
+      "An environmental gradient that uses shared logo colour variables.",
     props: "opacity?: number · className?: string",
     code: "<GradientOverlay opacity={0.6} />",
     path: "@/components/graphics/Patterns",
@@ -116,7 +117,7 @@ export const componentDocs = [
     category: "Graphics",
     description: "An SVG organic clip for existing local nature imagery.",
     props: "src: string · className?: string",
-    code: '<NatureMask src="/imagery/texture.webp" />',
+    code: '<NatureMask src="/imagery/macro.webp" />',
     path: "@/components/graphics/Patterns",
   },
   {

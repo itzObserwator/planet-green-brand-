@@ -1,0 +1,85 @@
+/* Original SVG artwork is sized proportionally; its paths and fills are untouched. */
+.site-header .header-download {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.logo-main .panel-bottom > span {
+  opacity: 1;
+}
+.brand-logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+.brand-logo-compact {
+  width: 150px;
+}
+.logo-stage .brand-logo {
+  width: 340px;
+  margin: auto;
+}
+.mini-nav .brand-logo {
+  width: 115px;
+}
+.social-tile > .brand-logo,
+.brochure-cover > .brand-logo {
+  position: relative;
+  z-index: 1;
+  width: 140px;
+}
+.tote .brand-logo {
+  width: 125px;
+}
+.bottle .brand-logo {
+  width: 78px;
+}
+.shirt .brand-logo {
+  width: 120px;
+}
+.library-navbar .brand-logo {
+  width: 110px;
+}
+.board-2 .brand-logo {
+  width: 170px;
+  margin-bottom: 35px;
+}
+.library-preview.preview-dark {
+  color: var(--pg-white);
+}
+.preview-dark::before {
+  background: radial-gradient(
+    ellipse at 80% 90%,
+    var(--pg-green-primary),
+    transparent 70%
+  );
+}
+.preview-dark .library-type em {
+  color: var(--pg-green-light);
+}
+.language-grid .language-art > .eyebrow,
+.site-footer .footer-message > .eyebrow,
+.signage-scene .signage > .eyebrow {
+  color: var(--pg-white);
+}
+.site-footer .footer-base > span:not(.brand-placeholder) {
+  opacity: 0.85;
+}
+@media (max-width: 767px) {
+  .site-header .brand-logo {
+    width: 112px;
+  }
+  .footer-base .brand-logo {
+    width: 145px;
+  }
+  .board-2 .brand-logo {
+    width: 125px;
+  }
+}
+@media (max-width: 374px) {
+  .site-header .brand-logo {
+    width: 104px;
+  }
+}

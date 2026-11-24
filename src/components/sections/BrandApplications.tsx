@@ -1,26 +1,56 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
   Leaf,
+  Sprout,
   MapPin,
 } from "lucide-react";
-import { SectionHeading } from "@/components/brand/SectionHeading";
 import { BrandLogo } from "@/components/brand/BrandLogo";
-import { HalftonePattern, ContourLines } from "@/components/graphics/Patterns";
-const tabs = ["Digital", "Social", "Print", "Objects", "Wayfinding"];
-export function BrandApplications() {
-  const [tab, setTab] = useState("Digital");
+export const applicationTabs = [
+  "Digital",
+  "Social",
+  "Print",
+  "Objects",
+  "Wayfinding",
+] as const;
+export type ApplicationTab = (typeof applicationTabs)[number];
+const tabs = applicationTabs;
+export function BrandApplications({
+  activeTab,
+  onTabChange,
+  title = "Out in the world.",
+}: {
+  activeTab?: ApplicationTab;
+  onTabChange?: (tab: ApplicationTab) => void;
+  title?: string;
+} = {}) {
+  const [localTab, setLocalTab] = useState<ApplicationTab>("Digital");
+  const tab = activeTab ?? localTab;
+  function setTab(next: ApplicationTab) {
+    setLocalTab(next);
+    onTabChange?.(next);
+  }
   const [mobile, setMobile] = useState(false);
   const [portrait, setPortrait] = useState(false);
   return (
-    <section id="applications" className="brand-section">
-      <SectionHeading number="11" title="Out in the world.">
-        One connected identity. Endless possibilities.
-      </SectionHeading>
+    <section id="applications" className="brand-section applications-editorial">
+      <header className="applications-editorial-heading">
+        <div>
+          <p>Brand applications</p>
+          <h2>{title}</h2>
+        </div>
+        <p>
+          Everyday encounters. A relationship to experience.
+          <br />
+          The same invitation, wherever people meet Planet Green: notice,
+          participate and care.
+        </p>
+      </header>
       <div className="applications-toolbar">
         <div className="tabs" role="tablist" aria-label="Application types">
           {tabs.map((t) => (
@@ -53,9 +83,7 @@ export function BrandApplications() {
             </button>
           ))}
         </div>
-        <span className="status-tag">
-          Application concepts · approval pending
-        </span>
+        <span className="status-tag">Concept applications</span>
       </div>
       <div
         className="application-preview"
@@ -67,7 +95,7 @@ export function BrandApplications() {
         {tab === "Digital" ? (
           <>
             <div className="preview-controls">
-              <span>Website / responsive hero</span>
+              <span>Planet Green / A relationship put into practice</span>
               <div className="segmented">
                 <button aria-pressed={!mobile} onClick={() => setMobile(false)}>
                   Desktop
@@ -77,38 +105,71 @@ export function BrandApplications() {
                 </button>
               </div>
             </div>
-            <div className={`website-mockup ${mobile ? "mobile" : ""}`}>
-              <div className="mockup-browser">
-                <span />
-                <span />
-                <span />
-                <small>planetgreen · homepage concept</small>
-              </div>
-              <div className="mini-hero">
-                <Image
-                  src="/imagery/floating-earth.webp"
-                  alt="Floating earth artwork in a responsive website application concept"
-                  fill
-                  sizes="(max-width: 767px) 100vw, 1000px"
-                />
-                <div className="mini-nav">
-                  <BrandLogo compact />
-                  <span>
-                    Our philosophy &nbsp; Communities &nbsp; Connect{" "}
-                    <ArrowUpRight size={12} />
-                  </span>
+            <div className="digital-editorial-stage">
+              <Image
+                className="digital-stage-backdrop"
+                src="/imagery/moss-garden-device.webp"
+                alt=""
+                fill
+                sizes="(max-width:700px) 100vw, 1200px"
+              />
+              <div className={`website-mockup ${mobile ? "mobile" : ""}`}>
+                <div className="mockup-browser">
+                  <span />
+                  <span />
+                  <span />
+                  <small>planetgreen.co.in</small>
                 </div>
-                <div className="mini-copy">
-                  <span className="eyebrow">A more natural way of living</span>
-                  <h3>
-                    Move to
-                    <br />
-                    Nature.
-                  </h3>
-                  <p>Good things grow here.</p>
-                  <a href="#purpose">
-                    Find your connection <ArrowUpRight size={14} />
-                  </a>
+                <div className="mini-hero">
+                  <div className="mini-nav">
+                    <BrandLogo compact />
+                    <span>Food. Soil. Community.</span>
+                  </div>
+                  <div className="mini-editorial-layout">
+                    <div className="mini-copy">
+                      <span className="eyebrow">A closer life. By nature.</span>
+                      <h3>
+                        Move to
+                        <br />
+                        Nature.
+                      </h3>
+                      <p>
+                        Relearn to make food,
+                        <br />
+                        grow produce and replenish soil.
+                      </p>
+                      <Link href="/#purpose">
+                        Find your connection{" "}
+                        <Sprout
+                          size={17}
+                          strokeWidth={1.3}
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    </div>
+                    <div className="mini-nature-frame">
+                      <Image
+                        src="/imagery/hands-soil-editorial.webp"
+                        alt="Hands nurturing living soil and young plant life, a photographic brand concept"
+                        fill
+                        sizes="(max-width:700px) 80vw, 500px"
+                      />
+                      <div className="mini-nature-tag">
+                        <span>
+                          <Sprout size={25} strokeWidth={1} />
+                        </span>
+                        <p>
+                          Grow a closer
+                          <br />
+                          connection.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mini-site-footer">
+                    <span>Begin where you are.</span>
+                    <span>Farm Natura / The Eco World</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -116,7 +177,7 @@ export function BrandApplications() {
         ) : tab === "Social" ? (
           <>
             <div className="preview-controls">
-              <span>Social / campaign templates</span>
+              <span>Farm Natura / Cultivation & connection</span>
               <div className="segmented">
                 <button
                   aria-pressed={!portrait}
@@ -135,36 +196,44 @@ export function BrandApplications() {
             <div className={`social-mockups ${portrait ? "portrait" : ""}`}>
               <div className="social-tile">
                 <Image
-                  src="/imagery/farming.webp"
-                  alt="Plants in a nature campaign concept"
+                  src="/imagery/hands-soil-editorial.webp"
+                  alt="Hands, living soil and young plant life in a campaign concept"
                   fill
                   sizes="500px"
                 />
                 <div className="social-shade" />
-                <BrandLogo compact />
+                <BrandLogo compact tone="dark" />
                 <h3>
-                  From Healthy Soil
+                  Farm Natura.
                   <br />
-                  to Thriving
+                  Grow closer
                   <br />
-                  <em>Communities.</em>
+                  <em>to the land.</em>
                 </h3>
-                <HalftonePattern opacity={0.2} />
                 <span className="eyebrow">
                   Move to Nature <ArrowUpRight size={15} />
                 </span>
               </div>
               <div className="social-tile text-social">
-                <BrandLogo compact />
-                <ContourLines opacity={0.3} />
+                <BrandLogo compact tone="dark" />
+                <div className="social-seed-photo">
+                  <Image
+                    src="/elements/seed-cluster.webp"
+                    alt=""
+                    fill
+                    sizes="300px"
+                  />
+                </div>
                 <h3>
-                  A little closer
+                  Indulge.
                   <br />
-                  to what
+                  Involve.
                   <br />
-                  <em>matters.</em>
+                  <em>Impact.</em>
                 </h3>
-                <span className="eyebrow">People. Planet. Possibility.</span>
+                <span className="eyebrow">
+                  Enjoy nature. Take part. Give back.
+                </span>
               </div>
             </div>
           </>
@@ -172,23 +241,20 @@ export function BrandApplications() {
           <div className="print-preview">
             <div className="brochure-cover">
               <Image
-                src="/imagery/landscape.webp"
-                alt="Forest photography on a brochure cover concept"
+                src="/imagery/finale-stationery.webp"
+                alt="Kraft stationery box with forest-green tissue and a paper booklet, a photographic application concept"
                 fill
-                sizes="500px"
+                sizes="(max-width:700px) 100vw, 600px"
               />
-              <div className="social-shade" />
-              <BrandLogo compact />
-              <div>
-                <span className="eyebrow">The Planet Green philosophy</span>
+              <div className="brochure-imprint">
+                <BrandLogo />
                 <h3>
-                  A place
+                  Make room
                   <br />
-                  to grow.
+                  for nature.
                 </h3>
-                <p>People, Land and Nature in Harmony.</p>
+                <span>The Eco World</span>
               </div>
-              <ContourLines opacity={0.2} />
             </div>
             <div className="print-copy">
               <span className="eyebrow">Brochure / cover study</span>
@@ -198,75 +264,107 @@ export function BrandApplications() {
                 take root.
               </h3>
               <p>
-                Open space, confident typography and a window into the natural
-                world.
+                A proposed The Eco World community booklet, carrying Planet
+                Green’s purpose into the relationship between home, landscape
+                and everyday life.
               </p>
               <span className="fine-print">
                 A4 portrait · 3 mm bleed to be added in print artwork.
                 <br />
-                Placeholder identity; not a print-ready approved asset.
+                Original logo; concept layout, not print-ready artwork.
               </span>
             </div>
           </div>
         ) : tab === "Objects" ? (
           <div className="merch-grid">
             <div className="merch-item">
-              <div className="tote">
-                <div className="tote-handle" />
-                <BrandLogo compact />
-                <span>Move to Nature.</span>
+              <div className="application-object-photo object-seed-package">
+                <Image
+                  src="/imagery/finale-stationery.webp"
+                  alt="Seed envelope and paper booklet in a kraft community welcome package concept"
+                  fill
+                  sizes="(max-width:700px) 90vw, 400px"
+                />
+                <div className="object-package-imprint">
+                  <BrandLogo />
+                  <span>
+                    Grow a closer
+                    <br />
+                    connection.
+                  </span>
+                </div>
               </div>
-              <span>01 / Cotton tote</span>
+              <span>Community welcome pack</span>
             </div>
             <div className="merch-item">
-              <div className="bottle">
-                <div className="bottle-cap" />
-                <Leaf size={26} strokeWidth={1} />
-                <BrandLogo compact />
+              <div className="application-object-photo object-brand-card">
+                <Image
+                  src="/imagery/finale-brand-card.webp"
+                  alt="A hand holding a thick paper brand card, a photographic concept"
+                  fill
+                  sizes="(max-width:700px) 90vw, 400px"
+                />
+                <BrandLogo />
               </div>
-              <span>02 / Reusable bottle</span>
+              <span>A personal invitation</span>
             </div>
             <div className="merch-item">
-              <div className="shirt">
-                <BrandLogo compact />
+              <div className="application-object-photo object-seed-study">
+                <BrandLogo tone="dark" />
+                <div>
+                  <Image
+                    src="/elements/seed-cluster.webp"
+                    alt="Photographic seed elements for a seed-sharing identity concept"
+                    fill
+                    sizes="(max-width:700px) 80vw, 350px"
+                  />
+                </div>
+                <p>
+                  Small beginnings.
+                  <br />
+                  Room to grow.
+                </p>
               </div>
-              <span>03 / Everyday tee</span>
+              <span>Seed-sharing concept</span>
             </div>
             <p className="fine-print merch-note">
-              CSS form studies with labelled placeholders. Apply the exact
-              approved logo before production.
+              Photographic application concepts. Final production artwork
+              follows the original logo and brand guidelines.
             </p>
           </div>
         ) : (
           <div className="signage-scene">
-            <Image
-              src="/imagery/forest.webp"
-              alt="Forest setting behind an environmental signage concept"
-              fill
-              sizes="1000px"
-            />
-            <div className="signage">
-              <BrandLogo compact />
-              <div>
-                <span>
-                  <SproutIcon /> Natural farm
+            <div className="wayfinding-photo-plane">
+              <Image
+                src="/imagery/farm-wayfinding-display.webp"
+                alt="Photographic concept of a timber-supported directional sign beside a sunlit cultivated farm path"
+                fill
+                sizes="1000px"
+              />
+              <div className="signage">
+                <BrandLogo compact tone="dark" />
+                <div>
+                  <span>
+                    <SproutIcon /> Natural farm
+                  </span>
+                  <ArrowRight size={25} />
+                </div>
+                <div>
+                  <span>
+                    <MapPin size={20} /> Community space
+                  </span>
+                  <ArrowUpRight size={25} />
+                </div>
+                <div>
+                  <span>
+                    <Leaf size={20} /> Nature trail
+                  </span>
+                  <ArrowDown size={25} />
+                </div>
+                <span className="eyebrow">
+                  Farm Natura / Wayfinding concept
                 </span>
-                <ArrowRight size={25} />
               </div>
-              <div>
-                <span>
-                  <MapPin size={20} /> Community space
-                </span>
-                <ArrowUpRight size={25} />
-              </div>
-              <div>
-                <span>
-                  <Leaf size={20} /> Nature trail
-                </span>
-                <ArrowDown size={25} />
-              </div>
-              <ContourLines opacity={0.12} />
-              <span className="eyebrow">Take the natural way.</span>
             </div>
           </div>
         )}
@@ -275,5 +373,5 @@ export function BrandApplications() {
   );
 }
 function SproutIcon() {
-  return <Leaf size={20} />;
+  return <Sprout size={20} />;
 }

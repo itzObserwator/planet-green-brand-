@@ -1,6 +1,6 @@
 # Planet Green · A Living Identity
 
-A responsive Next.js App Router website and reusable identity toolkit. The identity page contains all 11 sections; `/explorer/` includes component previews, API documentation, copyable examples, a complete board, tokens, type, applications and an opt-in 3D study.
+A responsive Next.js App Router website and reusable identity toolkit. The identity page presents all 11 sections as a reference-inspired nature-and-technology presentation, with a white canvas, original-logo greens, dithered cover, rounded image specimens, glass capsules and interactive application previews. The component library and dedicated `/applications/` page share the white canvas, original-logo greens, rounded specimens and translucent surfaces. The library’s Guidelines tab retains the complete interactive editors; `/explorer/` includes component previews, API documentation, copyable examples, a complete board, tokens, type, applications and an opt-in 3D study.
 
 ## Start locally
 
@@ -21,7 +21,7 @@ npm test
 npm run build
 ```
 
-The build creates a standalone static site in `out/`. To serve the actual production output:
+The build creates a standalone static site in `out/`. Production compilation uses `.next-build/`, separate from the running development server’s `.next/` cache. To serve the actual production output:
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1 --directory out
@@ -31,14 +31,14 @@ python3 -m http.server 4173 --bind 127.0.0.1 --directory out
 
 ## Brand asset status — action required
 
-The only supplied attachment was the text brief. **No original logo, visual reference image, approved colour values, licensed Brutel files or approved 3D model was supplied.**
+The original logo was subsequently supplied inline. Matching original SVG artwork was retrieved from Planet Green’s official website and integrated without path or fill changes. The supplied visual reference guides the glass styling, now adapted to light mode. Licensed Brutel files and an approved 3D model remain unavailable.
 
-- The text signature is visibly labelled “Logo asset pending”; it is not a replacement logo.
-- Greens are **provisional interface study colours**, not sampled or approved brand colours.
-- Logo variants, SVG/PNG downloads and logo-derived patterns remain pending. No recolouring or replacement geometry has been invented.
+- The primary signature is the original SVG. The official-site light-letter variant is used on dark surfaces.
+- Greens are read directly from original SVG fills: Forest `#156B37`, Fern `#50AD47`, Leaf `#B5D5A1`, Mist `#E8F0E1`. Usage roles remain implementation guidance.
+- Original SVG and PNG exports are downloadable. Single-colour/standalone-symbol use and logo-derived patterns remain pending approval.
 - Inter is self-hosted via Fontsource. Brutel remains a documented fallback requirement.
 - The floating-earth hero is generated concept artwork. Other photos are reference selections from Unsplash. All application mockups are concepts.
-- The 3D study is a generic procedural experiment, loaded only when requested on larger screens. The production hero uses a 77 KB WebP and lightweight pointer motion.
+- The 3D study is a generic procedural experiment, loaded only when requested on larger screens. The production board uses the existing 77 KB WebP hero.
 
 See [BRAND_GUIDELINES.md](BRAND_GUIDELINES.md) for the asset approval and integration procedure and [ASSET_PROVENANCE.md](ASSET_PROVENANCE.md) for photography and generation details.
 
@@ -103,4 +103,4 @@ The checked-in configuration uses locally installed Google Chrome on macOS. On o
 
 ## Approval boundary
 
-This is an implemented and testable identity **study**, not a claim of an approved final identity. Supply the original logo/vector variants, reference image, approved palette, licensed Brutel fonts and approved photography before brand release or merchandise production. No analytics, form submissions, accounts or unrequested data collection are included.
+This is an implemented and testable identity **study**, not a claim of an approved final identity. Confirm standalone logo variants, the reference-led layout, palette usage, licensed Brutel fonts and approved photography before brand release or merchandise production. No analytics, form submissions, accounts or unrequested data collection are included.

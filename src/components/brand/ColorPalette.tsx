@@ -8,7 +8,7 @@ import { SectionHeading } from "./SectionHeading";
 export function ColorPalette() {
   const [copied, setCopied] = useState("");
   const [error, setError] = useState("");
-  const [foreground, setForeground] = useState<"#FFFFFF" | "#202720">(
+  const [foreground, setForeground] = useState<"#FFFFFF" | "#1E1E1E">(
     "#FFFFFF",
   );
   async function copy(hex: string) {
@@ -31,7 +31,7 @@ export function ColorPalette() {
       <div className="palette-intro">
         <p>A considered spectrum, from deep forest to soft light.</p>
         <span className="status-tag">
-          Provisional study · logo sampling required
+          Sampled from original Planet Green artwork
         </span>
       </div>
       <div className="palette-grid">
@@ -40,14 +40,14 @@ export function ColorPalette() {
             key={c.hex}
             className={`swatch swatch-${i}`}
             onClick={() => copy(c.hex)}
-            aria-label={`Copy provisional ${c.name} HEX ${c.hex}`}
+            aria-label={`Copy ${c.name} HEX ${c.hex}`}
           >
             <div
               className="swatch-colour"
               style={{
                 background: c.hex,
                 color:
-                  contrast(c.hex, "#FFFFFF") >= 4.5 ? "#FFFFFF" : "#202720",
+                  contrast(c.hex, "#FFFFFF") >= 4.5 ? "#FFFFFF" : "#1E1E1E",
               }}
             >
               <span className="swatch-number">0{i + 1}</span>
@@ -77,8 +77,8 @@ export function ColorPalette() {
             White text
           </button>
           <button
-            aria-pressed={foreground === "#202720"}
-            onClick={() => setForeground("#202720")}
+            aria-pressed={foreground === "#1E1E1E"}
+            onClick={() => setForeground("#1E1E1E")}
           >
             Ink text
           </button>

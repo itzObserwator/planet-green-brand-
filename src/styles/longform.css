@@ -1,0 +1,361 @@
+/* Original full-length structure, with the light glass visual language. */
+.site-header.reference-header {
+  background: #f5f7f0;
+  color: #1e1e1e;
+  border-color: #d4decc;
+  position: sticky;
+  height: 80px;
+}
+.reference-header .main-nav a {
+  color: #546052;
+}
+.reference-header .main-nav a[aria-current] {
+  color: #156b37;
+}
+.reference-header .header-download {
+  color: #1e1e1e;
+  border-color: #9aaf8e;
+}
+.reference-header .main-nav {
+  background: #f5f7f0;
+}
+.light-identity {
+  background: #f5f7f0;
+  color: #1e1e1e;
+  --pg-muted: #546052;
+  --pg-line: #cad6c1;
+  --pg-radius: 24px;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+.light-identity .page-intro {
+  padding-block: 30px;
+}
+.light-identity .hero {
+  border: 1px solid #b7c8a8;
+  box-shadow: inset 0 1px 12px #d0e9b82e;
+}
+.light-identity .hero-copy h1 {
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+.light-identity .hero:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(#c8e4b4 0.6px, transparent 0.8px) 0 0/5px 5px;
+  opacity: 0.18;
+  mask-image: linear-gradient(
+    120deg,
+    #000,
+    transparent 22%,
+    transparent 80%,
+    #000
+  );
+}
+.light-identity .identity-layout {
+  padding-top: 50px;
+  gap: 30px;
+}
+.light-identity .section-nav {
+  top: 110px;
+  padding: 18px 8px;
+  border: 1px solid #bccdb0;
+  border-radius: 17px;
+  background: linear-gradient(135deg, #ffffffd9, #e8efdfd9);
+  box-shadow: inset 0 1px 10px #d0e9b81a;
+}
+.light-identity .section-nav a[aria-current] {
+  color: #156b37;
+  background: #dce9ce;
+}
+.light-identity .section-nav a:hover {
+  color: #156b37;
+}
+.light-identity .brand-section {
+  padding: 28px;
+  margin-bottom: 28px;
+  border: 1px solid #bccdb0;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 90% 100%, #dce8cf80, transparent 60%),
+    linear-gradient(130deg, #ffffffed, #f9fbf4 65%, #edf3e5);
+  box-shadow:
+    inset 0 1px 12px #d0e9b826,
+    0 8px 25px #344c2310;
+}
+.light-identity .section-heading {
+  border-top: 0;
+  border-bottom: 1px solid #cad6c1;
+  padding: 0 0 20px;
+  margin-bottom: 28px;
+}
+.light-identity .section-label > span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #156b37;
+}
+.light-identity .section-label h2 {
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.light-identity em,
+.light-identity .principle > svg {
+  color: #156b37;
+}
+.light-identity .logo-main.on-dark {
+  background: radial-gradient(ellipse at 70% 100%, #45603b, #0d1b0f);
+  border-color: #7e906f;
+}
+.light-identity .on-light {
+  color: #1e1e1e;
+  --pg-muted: #546052;
+}
+.light-identity .logo-small,
+.light-identity .contrast-panel,
+.light-identity .type-showcase,
+.light-identity .application-preview,
+.light-identity .graphic-caption,
+.light-identity .icon-tile {
+  background: linear-gradient(130deg, #fffffff0, #eaf2e0b3);
+  border-color: #b7c9a8;
+  color: #1e1e1e;
+  box-shadow: inset 0 1px 8px #d0e9b81a;
+}
+.light-identity .symbol-pending,
+.light-identity .symbol-pending span,
+.light-identity .type-title .eyebrow,
+.light-identity .type-aa {
+  color: #156b37;
+}
+.light-identity .type-details {
+  border-color: #cad6c1;
+}
+.light-identity .type-playground > input,
+.light-identity .icon-toolbar select {
+  background: #ffffffd9;
+  color: #1e1e1e;
+  border-color: #b7c9a8;
+}
+.light-identity .status-tag {
+  background: #e6eedf;
+  color: #34552b;
+  border-color: #afc39e;
+}
+.light-identity .graphic-tile {
+  background: #e8f0e1;
+}
+.light-identity .graphic-art {
+  color: #156b37;
+}
+.light-identity .icon-tile {
+  color: #156b37;
+}
+.light-identity .icon-tile:hover {
+  background: #dce9ce;
+}
+.light-identity .segmented button[aria-pressed="true"],
+.light-identity .tabs button[aria-selected="true"] {
+  background: linear-gradient(#e0efc5, #a4cd78);
+  color: #152410;
+}
+.light-identity .icon-toolbar option {
+  background: #f5f7f0;
+  color: #1e1e1e;
+}
+.light-identity .surface-demo {
+  display: block;
+  height: auto;
+  grid-template-columns: none;
+  gap: normal;
+}
+.light-identity .surface-controls .button.dark {
+  background: linear-gradient(#e0efc5, #a4cd78);
+  color: #152410;
+  border-color: #c3dba8;
+}
+.light-identity .website-mockup {
+  color: #1e1e1e;
+}
+.light-identity .mockup-browser {
+  --pg-muted: #546052;
+}
+.light-identity .text-social {
+  color: #1e1e1e;
+}
+.light-identity .tote,
+.light-identity .shirt {
+  color: #156b37;
+}
+.light-identity .asset-notice {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  background: linear-gradient(120deg, #ffffffd9, #e9f1e1);
+}
+.light-identity .site-footer {
+  margin: 0 32px;
+  background: linear-gradient(110deg, #edf4e5, #ffffff 80%);
+  color: #1e1e1e;
+  border: 1px solid #bccdb0;
+  border-radius: 24px;
+  box-shadow: inset 0 1px 12px #d0e9b826;
+}
+.light-identity :focus-visible {
+  outline-color: #156b37;
+}
+.light-identity .on-light :focus-visible {
+  outline-color: #156b37;
+}
+@media (max-width: 1023px) {
+  .light-identity .identity-layout {
+    padding-inline: 0;
+  }
+  .light-identity .site-footer {
+    margin-inline: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .site-header.reference-header {
+    height: 76px;
+    padding-inline: 16px;
+  }
+  .light-identity .main-shell {
+    padding-inline: 12px;
+  }
+  .light-identity .page-intro {
+    padding: 22px 4px;
+  }
+  .light-identity .brand-section {
+    padding: 20px 16px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .light-identity .section-heading {
+    gap: 12px;
+  }
+  .light-identity .section-label h2 {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .light-identity .section-description {
+    font-size: 9px;
+  }
+  .light-identity .identity-layout {
+    padding-top: 28px;
+  }
+  .light-identity .site-footer {
+    margin-inline: 12px;
+    padding: 35px 22px;
+    border-radius: 20px;
+  }
+  .light-identity .asset-notice {
+    margin-inline: 0;
+  }
+  .light-identity .section-label {
+    gap: 10px;
+  }
+}
+.light-identity .type-title h3 em {
+  color: #156b37;
+}
+.light-identity .text-social h3 em {
+  color: #156b37;
+}
+.light-identity .glass-modal {
+  --pg-muted: #546052;
+  --pg-line: #dce0d7;
+}
+
+/* Light interface over the original, unchanged hero artwork. */
+.light-identity .hero {
+  background: #edf3e5;
+  color: #1e1e1e;
+}
+.light-identity .hero-vignette {
+  background: linear-gradient(
+    90deg,
+    #fafbf7 0%,
+    #fafbf7f5 28%,
+    #fafbf7b3 43%,
+    #fafbf726 66%,
+    transparent 82%
+  );
+}
+.light-identity .hero-copy h1 > span {
+  color: #156b37;
+}
+.light-identity .hero-copy p {
+  color: #394b33;
+}
+.light-identity .hero-copy .button.light {
+  background: #156b37;
+  color: #ffffff;
+}
+.light-identity .hero-topline .eyebrow {
+  color: #34552b;
+}
+.light-identity .hero-edition {
+  background: #f5f7f0d9;
+  padding: 7px 10px;
+  border-radius: 20px;
+  color: #34552b;
+  opacity: 1;
+}
+.light-identity .hero-orbit-label {
+  background: #f5f7f0d9;
+  color: #24351e;
+  border-color: #d0dfc2;
+}
+.light-identity .hero-bottom {
+  background: #f5f7f0e6;
+  color: #34552b;
+  padding: 14px 18px;
+  border: 1px solid #d0dfc2;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+.light-identity .hero-bottom a {
+  border-color: #9caf8f;
+}
+.light-identity .hero-bottom > span:nth-child(2) {
+  opacity: 1;
+}
+.light-identity .site-footer .footer-message > .eyebrow,
+.light-identity .footer-message h2 em {
+  color: #156b37;
+}
+.light-identity .site-footer .footer-base {
+  border-color: #cad6c1;
+}
+.light-identity .site-footer .button.light {
+  background: #156b37;
+  color: #fff;
+}
+.light-identity .site-footer .footer-base > span {
+  opacity: 1;
+  color: #546052;
+}
+.light-identity .logo-main.on-dark {
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .light-identity .hero-vignette {
+    background: linear-gradient(
+      90deg,
+      #fafbf7f5,
+      #fafbf7e0 35%,
+      #fafbf75e 75%,
+      #fafbf733
+    );
+  }
+}
+.light-identity .hero-copy h1 > span:first-of-type {
+  color: #156b37;
+}
+.light-identity .site-footer a:focus-visible {
+  outline-color: #156b37;
+}

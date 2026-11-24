@@ -1,22 +1,21 @@
 :root {
-  /* PROVISIONAL study palette: replace ONLY after sampling the supplied original logo. */
-  --pg-green-primary: #173d2a;
-  --pg-green-secondary: #42734b;
-  --pg-green-leaf: #b7d598;
-  --pg-green-light: #e2e9dc;
-  --pg-ink: #202720;
+  /* Green values read from original SVG fills. Never recolour original logo files. */
+  --pg-green-primary: #156b37;
+  --pg-green-secondary: #50ad47;
+  --pg-green-leaf: #b5d5a1;
+  --pg-green-light: #e8f0e1;
+  --pg-ink: #1e1e1e;
   --pg-paper: #f5f5f0;
   --pg-white: #ffffff;
   --pg-muted: #546052;
   --pg-line: #dce0d7;
   --pg-surface-dark: #141a15;
   --pg-surface-light: #ffffff;
-  --pg-text-primary: #202720;
+  --pg-text-primary: #1e1e1e;
   --pg-radius: 24px;
   --pg-radius-sm: 12px;
-  --pg-font-display:
-    "Inter", Arial, sans-serif; /* Brutel pending licensed files */
-  --pg-font-body: "Inter", Arial, sans-serif;
+  --pg-font-display: "Outfit", Arial, sans-serif;
+  --pg-font-body: "Outfit", Arial, sans-serif;
   --pg-duration: 240ms;
   --pg-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }

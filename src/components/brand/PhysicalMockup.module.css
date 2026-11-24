@@ -1,0 +1,106 @@
+.mockup {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #eeece6;
+}
+.plane {
+  position: absolute;
+  height: 100%;
+  aspect-ratio: 2 / 3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  container-type: inline-size;
+}
+.plane > img:first-child {
+  object-fit: cover;
+}
+.wayfinding .plane {
+  aspect-ratio: 3 / 2;
+}
+.bookletPrint {
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  width: 54%;
+  transform: rotate(-23deg);
+  color: #233f25;
+  font-family: "Outfit", Arial, sans-serif;
+}
+.bookletPrint > img {
+  width: 100%;
+  height: auto;
+}
+.bookletTitle {
+  display: block;
+  font-size: 7cqw;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+  margin-top: 5cqw;
+}
+.bookletBrand {
+  display: block;
+  font-size: 2.3cqw;
+  margin-top: 2.5cqw;
+}
+.plane > .cardPrint {
+  position: absolute;
+  top: 26%;
+  left: 28%;
+  width: 45%;
+  height: auto;
+  transform: rotate(-9deg);
+}
+.signPrint {
+  position: absolute;
+  left: 35%;
+  top: 18%;
+  width: 30%;
+  height: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  font-family: "Outfit", Arial, sans-serif;
+}
+.signPrint > img {
+  width: 62%;
+  height: auto;
+  margin-bottom: 1.2cqw;
+}
+.signPrint > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1cqw;
+  border-top: 1px solid #ffffff40;
+  padding: 1cqw 0;
+  font-size: 1.5cqw;
+  line-height: 1.2;
+}
+.signPrint > div > span {
+  display: flex;
+  align-items: center;
+  gap: 0.9cqw;
+}
+.signPrint svg {
+  width: 1.7cqw;
+  height: 1.7cqw;
+  stroke-width: 1.4;
+  flex-shrink: 0;
+}
+.signPrint > small {
+  font-size: 0.95cqw;
+  color: #e2edcf;
+  margin-top: 1.2cqw;
+}
+.bookletPrint > .bookletArtwork {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 27%;
+  height: auto;
+}

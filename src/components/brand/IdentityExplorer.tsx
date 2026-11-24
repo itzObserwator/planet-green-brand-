@@ -1,5 +1,7 @@
 "use client";
-import { Component, ReactNode, useState } from "react";
+import { Component, ReactNode, useState, type CSSProperties } from "react";
+import Image from "next/image";
+import { brandImagery, libraryImagery } from "@/lib/brand-imagery";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -21,6 +23,9 @@ import { componentDocs } from "@/lib/component-docs";
 import { palette, sections } from "@/lib/brand-tokens";
 import { copyText, downloadText } from "@/lib/utils";
 import { BrandLogo } from "./BrandLogo";
+import { CollectionFooter } from "./CollectionChrome";
+import { LibraryHero } from "./LibraryHero";
+import { GivingBackLibrary } from "@/components/giving-back/GivingBackLibrary";
 import {
   GlassBadge,
   GlassButton,
@@ -61,13 +66,23 @@ class SceneBoundary extends Component<
     );
   }
 }
+import { BrandPurpose } from "./BrandPurpose";
+import { LogoSystem } from "@/components/sections/LogoSystem";
+import { VisualLanguage } from "@/components/sections/VisualLanguage";
+import { SurfaceSystem } from "@/components/sections/SurfaceSystem";
+import { GraphicElements } from "@/components/sections/GraphicElements";
+import { Iconography } from "@/components/sections/Iconography";
+import { ImageryStyle } from "@/components/sections/ImageryStyle";
+
 type Doc = (typeof componentDocs)[number];
 function ComponentPreview({
   name,
   onAction,
+  dark = true,
 }: {
   name: string;
   onAction: () => void;
+  dark?: boolean;
 }) {
   if (name === "GlassCard")
     return (
@@ -80,24 +95,30 @@ function ComponentPreview({
   if (name === "GlassButton")
     return (
       <div className="library-buttons">
-        <GlassButton onClick={onAction}>
+        <GlassButton className="liquid-glass liquid-control" onClick={onAction}>
           Explore <ArrowRight size={15} />
         </GlassButton>
-        <GlassButton variant="secondary" onClick={onAction}>
+        <GlassButton
+          className="liquid-glass liquid-control"
+          variant="secondary"
+          onClick={onAction}
+        >
           Secondary
         </GlassButton>
-        <GlassButton disabled>Disabled</GlassButton>
+        <GlassButton className="liquid-glass liquid-control" disabled>
+          Disabled
+        </GlassButton>
       </div>
     );
   if (name === "GlassBadge")
     return (
-      <GlassBadge>
+      <GlassBadge className="liquid-glass liquid-control">
         <Leaf size={14} /> Rooted in nature
       </GlassBadge>
     );
   if (name === "GlassModal")
     return (
-      <GlassButton onClick={onAction}>
+      <GlassButton className="liquid-glass liquid-control" onClick={onAction}>
         Open dialog <ArrowUpRight size={15} />
       </GlassButton>
     );
@@ -105,16 +126,18 @@ function ComponentPreview({
     return (
       <GlassImageFrame
         className="library-image-frame"
-        src="/imagery/forest.webp"
-        alt="Frosted forest image frame study"
+        src={brandImagery.growth.src}
+        alt={brandImagery.growth.alt}
       >
-        <GlassBadge>A window to nature</GlassBadge>
+        <GlassBadge className="liquid-glass liquid-control">
+          A window to nature
+        </GlassBadge>
       </GlassImageFrame>
     );
   if (name === "GlassNavbar")
     return (
-      <div className="library-navbar">
-        <BrandLogo compact />
+      <div className="library-navbar liquid-glass">
+        <BrandLogo compact tone="dark" />
         <span>Our world</span>
         <button onClick={onAction} aria-label="Open navigation demo">
           <ArrowUpRight size={16} />
@@ -129,14 +152,16 @@ function ComponentPreview({
         <em>Nature.</em>
       </p>
     );
-  if (name === "BrandLogo") return <BrandLogo />;
+  if (name === "BrandLogo") return <BrandLogo tone={dark ? "dark" : "light"} />;
   if (name === "HalftonePattern")
     return <HalftonePattern size={10} opacity={0.55} />;
   if (name === "ContourLines") return <ContourLines opacity={0.8} />;
   if (name === "OrganicShape") return <OrganicShape opacity={0.8} />;
   if (name === "GradientOverlay") return <GradientOverlay opacity={1} />;
   if (name === "NatureMask")
-    return <NatureMask src="/imagery/texture.webp" className="library-mask" />;
+    return (
+      <NatureMask src={brandImagery.growth.src} className="library-mask" />
+    );
   return (
     <div className="motion-preview">
       <span />
@@ -148,13 +173,20 @@ export function IdentityExplorer() {
   const query = useSearchParams();
   const initialTab = query.get("tab");
   const [tab, setTab] = useState(
-    initialTab && ["tokens", "typography", "applications"].includes(initialTab)
+    initialTab &&
+      [
+        "tokens",
+        "typography",
+        "applications",
+        "guidelines",
+        "artwork",
+      ].includes(initialTab)
       ? initialTab
       : "components",
   );
   const [filter, setFilter] = useState("All");
   const [search, setSearch] = useState("");
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   const [selected, setSelected] = useState<Doc | null>(null);
   const [demo, setDemo] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -197,10 +229,11 @@ export function IdentityExplorer() {
   }
   const exportTokens = () =>
     downloadText(
-      "planet-green-PROVISIONAL-tokens.json",
+      "planet-green-logo-colours.json",
       JSON.stringify(
         {
-          status: "PROVISIONAL — approval and logo sampling required",
+          status:
+            "Sampled from original logo SVG; usage roles are design guidance",
           colours: palette,
           radii: { card: "24px", small: "12px" },
           motion: { duration: "240ms", easing: "cubic-bezier(.2,.8,.2,1)" },
@@ -211,40 +244,17 @@ export function IdentityExplorer() {
       "application/json",
     );
   return (
-    <main id="main" className="explorer-shell">
-      <div className="explorer-heading">
-        <div>
-          <Link className="eyebrow muted" href="/">
-            Planet Green / Identity toolkit <ArrowUpRight size={13} />
-          </Link>
-          <h1>
-            A system.
-            <br />
-            <em>Ready to grow.</em>
-          </h1>
-          <p>
-            Explore the foundations. Inspect the components.
-            <br />
-            Build with a little more nature.
-          </p>
-        </div>
-        <div className="explorer-summary">
-          <span className="eyebrow">The working collection</span>
-          <div>
-            <strong>14</strong>
-            <span>Reusable components</span>
-          </div>
-          <div>
-            <strong>11</strong>
-            <span>Identity sections</span>
-          </div>
-          <span className="status-tag">v0.1 · Provisional identity study</span>
-        </div>
-      </div>
+    <main
+      id="main"
+      className="explorer-shell collection-shell library-landscape"
+    >
+      <LibraryHero />
       <nav className="explorer-tabs" aria-label="Toolkit views">
         {[
           ["components", "Components"],
+          ["artwork", "Giving back"],
           ["board", "Identity board"],
+          ["guidelines", "Guidelines"],
           ["tokens", "Design tokens"],
           ["typography", "Typography"],
           ["applications", "Applications"],
@@ -255,9 +265,10 @@ export function IdentityExplorer() {
           </button>
         ))}
         <button className="export-tokens" onClick={exportTokens}>
-          Draft tokens <ArrowDownToLine size={15} />
+          Colour tokens <ArrowDownToLine size={15} />
         </button>
       </nav>
+      {tab === "artwork" && <GivingBackLibrary />}
       {tab === "components" && (
         <>
           <div className="library-toolbar">
@@ -293,20 +304,36 @@ export function IdentityExplorer() {
               <span>{dark ? "Light previews" : "Dark previews"}</span>
             </button>
           </div>
-          <p className="library-count">
+          <p className="library-count" role="status" aria-live="polite">
             {filtered.length} components{" "}
-            <span>Click a component to inspect its API and example.</span>
+            <span>Select a specimen to inspect its API and example.</span>
           </p>
           <div className="library-grid">
             {filtered.map((doc) => (
-              <article key={doc.name} className="library-item">
+              <article
+                key={doc.name}
+                className={`library-item specimen-${doc.name.toLowerCase()}`}
+                style={
+                  libraryImagery(doc.name)
+                    ? ({
+                        "--library-image": `url("${libraryImagery(doc.name)?.src}")`,
+                      } as CSSProperties)
+                    : undefined
+                }
+              >
                 <div
-                  className={`library-preview ${dark ? "preview-dark" : "preview-light"}`}
+                  className={`library-preview ${dark ? "preview-dark" : "preview-light"} preview-${doc.category.toLowerCase()}`}
                 >
                   <ComponentPreview
                     name={doc.name}
+                    dark={dark}
                     onAction={() => setDemo(true)}
                   />
+                  {libraryImagery(doc.name) && (
+                    <span className="library-image-label">
+                      {libraryImagery(doc.name)?.label}
+                    </span>
+                  )}
                 </div>
                 <button
                   className="library-item-info"
@@ -319,6 +346,9 @@ export function IdentityExplorer() {
                   <span>
                     <strong>{doc.name}</strong>
                     <small>{doc.category}</small>
+                    <span className="library-item-description">
+                      {doc.description}
+                    </span>
                   </span>
                   <Code2 size={17} />
                 </button>
@@ -389,10 +419,22 @@ export function IdentityExplorer() {
                   <Box />
                 </div>
               ) : i === 9 ? (
-                <NatureMask
-                  src="/imagery/texture.webp"
-                  className="board-mask"
-                />
+                <div className="board-identity-photos">
+                  {[
+                    brandImagery.landscape,
+                    brandImagery.cultivation,
+                    brandImagery.growth,
+                  ].map((photo) => (
+                    <div key={photo.src}>
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        fill
+                        sizes="(max-width:700px) 30vw, 12vw"
+                      />
+                    </div>
+                  ))}
+                </div>
               ) : (
                 <h3>
                   Out in
@@ -415,12 +457,8 @@ export function IdentityExplorer() {
               ["--pg-radius-sm", "12px", "Inputs & small surfaces"],
               ["--pg-duration", "240ms", "Interface transitions"],
               ["--pg-ease", "cubic-bezier(.2,.8,.2,1)", "Organic motion curve"],
-              [
-                "--pg-font-display",
-                "Inter (temporary)",
-                "Brutel pending licensing",
-              ],
-              ["--pg-font-body", "Inter", "Body & interface text"],
+              ["--pg-font-display", "Outfit", "Headlines & display text"],
+              ["--pg-font-body", "Outfit", "Body & interface text"],
             ].map(([name, value, use]) => (
               <div key={name}>
                 <code>{name}</code>
@@ -431,9 +469,23 @@ export function IdentityExplorer() {
           </div>
           <p className="fine-print">
             Source of truth: src/styles/tokens.css and src/lib/brand-tokens.ts.
-            Greens are provisional and have not been sampled from the absent
-            original logo.
+            Greens are sampled from original Planet Green SVG fills. Neutral
+            surfaces and colour usage roles are documented in the guidelines.
           </p>
+        </div>
+      )}
+      {tab === "guidelines" && (
+        <div className="explorer-content">
+          <BrandPurpose />
+          <LogoSystem />
+          <ColorPalette />
+          <TypographyShowcase />
+          <VisualLanguage />
+          <SurfaceSystem />
+          <GraphicElements />
+          <Iconography />
+          <ImageryStyle />
+          <BrandApplications />
         </div>
       )}
       {tab === "typography" && (
@@ -492,7 +544,7 @@ export function IdentityExplorer() {
                 <Scene />
               </SceneBoundary>
             ) : (
-              <div className="scene-placeholder">
+              <div className="scene-placeholder liquid-glass">
                 <Box size={48} strokeWidth={0.8} />
                 <span>Ready when you are.</span>
               </div>
@@ -500,16 +552,12 @@ export function IdentityExplorer() {
           </div>
         </div>
       )}
-      <div className="explorer-bottom">
-        <span>Built to be reused. Designed to stay connected.</span>
-        <Link href="/">
-          Back to the living identity <ArrowUpRight size={15} />
-        </Link>
-      </div>
+      <CollectionFooter />
       <GlassModal
         open={selected !== null}
         onClose={() => setSelected(null)}
         title={selected?.name || "Component"}
+        className="liquid-glass liquid-paper library-liquid-dialog"
       >
         {selected && (
           <>
@@ -540,6 +588,7 @@ export function IdentityExplorer() {
         open={demo}
         onClose={() => setDemo(false)}
         title="A thoughtful interaction."
+        className="liquid-glass liquid-paper library-liquid-dialog"
       >
         <GlassBadge>
           <Leaf size={14} /> Component preview

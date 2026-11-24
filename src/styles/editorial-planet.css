@@ -1,0 +1,1094 @@
+/* Planet Green: photographic, editorial brand narrative. */
+.folio-identity {
+  background: #fff;
+  color: #141714;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.folio-identity h1,
+.folio-identity h2,
+.folio-identity h3 {
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+}
+.folio-identity h2 span,
+.folio-identity h3 span {
+  color: #757b74;
+}
+.folio-identity a:focus-visible,
+.folio-identity button:focus-visible,
+.folio-identity summary:focus-visible {
+  outline: 3px solid #156b37;
+  outline-offset: 6px;
+}
+.folio-identity .folio-label {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #5c655b;
+  margin-bottom: 32px;
+}
+.folio-photo {
+  position: relative;
+  overflow: hidden;
+}
+.folio-photo > img:not(.brand-logo) {
+  object-fit: cover;
+}
+.folio-link {
+  display: inline-block;
+  font-size: 16px;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 5px;
+  text-decoration: none;
+  width: fit-content;
+}
+.folio-link:hover {
+  color: #156b37;
+}
+.folio-chapter {
+  padding: 120px 4%;
+}
+.folio-cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  min-height: 760px;
+  height: calc(100svh - 105px);
+  max-height: 1050px;
+}
+.folio-cover-photo {
+  color: white;
+  min-height: 650px;
+  background: #20351d;
+}
+.folio-cover-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.28),
+    transparent 30%,
+    rgba(0, 0, 0, 0.5)
+  );
+}
+.folio-cover-photo > img {
+  object-position: 48% center;
+}
+.folio-cover-kicker {
+  position: absolute;
+  top: 36px;
+  left: 7%;
+  z-index: 1;
+  font-size: 14px;
+}
+.folio-cover h1 {
+  position: absolute;
+  left: 7%;
+  bottom: 16%;
+  z-index: 1;
+  font-size: clamp(74px, 9.8vw, 166px);
+  line-height: 0.93;
+}
+.folio-cover-discover {
+  position: absolute;
+  bottom: 6%;
+  left: 7%;
+  z-index: 1;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+  font-size: 16px;
+}
+.folio-cover-object {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f4f5f2;
+  padding: 36px 6% 40px;
+  overflow: hidden;
+}
+.folio-cover-object > .brand-logo {
+  width: 190px;
+  height: auto;
+  z-index: 1;
+}
+.folio-oval {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50% / 35%;
+}
+.folio-cover-oval {
+  position: absolute;
+  width: 77%;
+  height: 76%;
+  top: 9%;
+  background: #e9eee5;
+}
+.folio-cover-oval > img {
+  object-fit: cover;
+  object-position: center;
+}
+.folio-cover-object > p {
+  position: relative;
+  margin-top: auto;
+  font-size: clamp(26px, 2.7vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -0.045em;
+  text-align: center;
+}
+.folio-cover-object > p span {
+  color: #626b60;
+}
+.folio-glass {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: linear-gradient(
+    110deg,
+    rgba(19, 43, 20, 0.78),
+    rgba(76, 102, 48, 0.7) 60%,
+    rgba(37, 66, 30, 0.78)
+  );
+  backdrop-filter: blur(20px) saturate(1.15);
+  -webkit-backdrop-filter: blur(20px) saturate(1.15);
+  box-shadow:
+    inset 0 1px 1px #ffffff30,
+    0 12px 45px #10241012;
+  color: #fff;
+}
+.folio-cover-pill,
+.folio-surface-pill {
+  position: absolute;
+  top: 49%;
+  left: 9%;
+  width: 82%;
+  padding: 18px 22px 18px 15px;
+  border-radius: 100px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  z-index: 1;
+  font-size: clamp(17px, 1.9vw, 27px);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+}
+.folio-cover-pill > svg,
+.folio-surface-pill > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.folio-pill-icon {
+  width: 72px;
+  height: 72px;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #156b37;
+}
+.folio-pill-icon svg {
+  width: 32px;
+  height: 32px;
+}
+.folio-glass strong {
+  font-weight: 400;
+}
+.folio-manifesto {
+  position: relative;
+}
+.folio-manifesto > .folio-label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+.folio-manifesto h2 {
+  font-size: clamp(44px, 6.35vw, 108px);
+  line-height: 1.08;
+  text-indent: 35%;
+}
+.folio-side-story {
+  width: 49%;
+  margin: 130px 0 90px auto;
+}
+.folio-side-story h3 {
+  font-size: clamp(34px, 3.8vw, 60px);
+  margin-bottom: 35px;
+}
+.folio-side-story > p:not(.folio-label) {
+  max-width: 570px;
+  font-size: 18px;
+  color: #555e52;
+  margin-bottom: 25px;
+}
+.folio-origin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4%;
+  padding-top: 60px;
+}
+.folio-origin > svg {
+  margin-top: 50px;
+}
+.folio-origin h3 {
+  font-size: clamp(32px, 3vw, 48px);
+  margin-bottom: 30px;
+}
+.folio-origin p:not(.folio-label) {
+  max-width: 530px;
+  color: #555e52;
+  font-size: 18px;
+}
+.folio-origin .folio-founder {
+  margin: 35px 0 25px;
+  color: #141714 !important;
+}
+.folio-founder span {
+  font-size: 14px;
+  color: #5c655b;
+}
+.folio-wide-photo {
+  height: 760px;
+}
+.folio-wide-pill {
+  position: absolute;
+  left: 25%;
+  top: 37%;
+  width: 50%;
+  padding: 30px 55px;
+  border-radius: 140px;
+}
+.folio-wide-pill > span {
+  font-size: 14px;
+}
+.folio-wide-pill p {
+  font-size: clamp(40px, 5.5vw, 85px);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  margin-top: 15px;
+}
+.folio-relearning {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 110px 0 45px 25%;
+}
+.folio-relearning article + article {
+  border-left: 1px solid #daddd7;
+  padding-left: 25px;
+}
+.folio-relearning h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.folio-relearning p {
+  color: #596153;
+}
+.folio-identity .story-experiences {
+  max-width: none;
+  width: auto;
+  margin: 140px 0 0;
+  padding: 100px 0 0;
+  border-top: 1px solid #daddd7;
+}
+.folio-identity .story-experiences .terrain-section-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  margin-bottom: 80px;
+  align-items: end;
+}
+.folio-identity .story-experiences .terrain-section-intro h2 {
+  font-size: clamp(40px, 5vw, 80px);
+}
+.folio-identity .story-experiences .terrain-section-intro p {
+  font-size: 18px;
+  max-width: 550px;
+}
+.folio-identity .terrain-eyebrow {
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: #5c655b;
+  margin-bottom: 28px;
+}
+.folio-identity .story-experience-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.folio-identity .story-experience {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  overflow: visible;
+}
+.folio-identity .story-experience:nth-child(2) .story-experience-image {
+  order: 2;
+}
+.folio-identity .story-experience-image {
+  height: 610px;
+  border-radius: 48% / 30%;
+}
+.folio-identity .story-experience-image span {
+  background: #18391feb;
+  backdrop-filter: blur(15px);
+  color: #fff;
+  padding: 12px 20px;
+  border: 1px solid #ffffff60;
+  border-radius: 70px;
+  bottom: 30px;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.folio-identity .story-experience-copy {
+  padding: 55px 0;
+  align-self: center;
+}
+.folio-identity .story-experience-copy h3 {
+  font-size: clamp(36px, 4.3vw, 64px);
+  max-width: 560px;
+}
+.folio-identity .story-experience-copy > p:not(.terrain-eyebrow) {
+  font-size: 18px;
+  color: #555e52;
+  margin-top: 32px;
+}
+.folio-identity .story-experience-practice {
+  border-top: 1px solid #daddd7;
+  background: none;
+  border-radius: 0;
+  padding: 25px 0 0;
+  color: #344731;
+  font-size: 16px;
+}
+.folio-identity .story-shared-purpose {
+  margin-top: 80px;
+  background: none;
+  border-top: 1px solid #daddd7;
+  border-radius: 0;
+  padding: 35px 0;
+}
+.folio-identity .story-shared-purpose p {
+  font-size: clamp(24px, 3vw, 42px);
+  line-height: 1.2;
+}
+.folio-identity .terrain-asset-note {
+  font-size: 13px;
+  color: #626b60;
+}
+.folio-invitation {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  background: #f4f5f2;
+}
+.folio-invitation-heading {
+  padding: 85px 10%;
+  align-self: center;
+}
+.folio-invitation h2 {
+  font-size: clamp(38px, 4.6vw, 70px);
+  margin-bottom: 40px;
+}
+.folio-philosophy-stage {
+  min-height: 730px;
+}
+.folio-philosophy-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #10261380, transparent 65%);
+  pointer-events: none;
+}
+.folio-philosophy-tabs {
+  position: absolute;
+  top: 35px;
+  left: 6%;
+  right: 6%;
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+.folio-identity .terrain-philosophy-card {
+  display: block;
+  width: auto;
+  min-height: 48px;
+  padding: 11px 22px;
+  border-radius: 50px;
+  border: 1px solid #ffffffa0;
+  color: #fff;
+  font: inherit;
+  background: #15351fe8;
+  transform: none;
+  box-shadow: none;
+  opacity: 1;
+}
+.folio-identity .terrain-philosophy-card.is-active {
+  background: #fff;
+  color: #15351f;
+}
+.folio-philosophy-copy {
+  position: absolute;
+  top: 37%;
+  left: 12%;
+  width: 76%;
+  z-index: 1;
+  border-radius: 100px;
+  padding: 40px 45px;
+}
+.folio-philosophy-copy h3 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.folio-philosophy-copy p {
+  font-size: 19px;
+  max-width: 400px;
+}
+.folio-carousel-controls {
+  position: absolute;
+  bottom: 35px;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+  color: #fff;
+}
+.folio-carousel-controls button {
+  border: 1px solid #ffffff90;
+  background: #15351fe8;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.folio-system-intro {
+  padding-bottom: 90px;
+}
+.folio-system-intro h2 {
+  font-size: clamp(55px, 7.5vw, 115px);
+}
+.folio-system-intro > p:last-child {
+  margin: 50px 0 0 auto;
+  width: 49%;
+  font-size: 20px;
+  color: #555e52;
+}
+.folio-logo-chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.folio-logo-light,
+.folio-logo-dark {
+  padding: 80px 9%;
+  min-height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+.folio-logo-light {
+  background: #f4f5f2;
+}
+.folio-logo-dark {
+  background: #173f26;
+  color: white;
+}
+.folio-logo-chapter .brand-logo {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+.folio-logo-dark > div {
+  text-align: center;
+}
+.folio-logo-dark p {
+  font-size: 20px;
+}
+.folio-logo-dark .download-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+}
+.folio-logo-dark .download-group a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 22px;
+  border: 1px solid #ffffff90;
+  border-radius: 50px;
+}
+.folio-logo-dark .folio-link:hover {
+  color: #b5d5a1;
+}
+.folio-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+}
+.folio-type h2 {
+  font-size: clamp(150px, 24vw, 370px);
+  line-height: 1;
+}
+.folio-type h3 {
+  font-size: clamp(35px, 4vw, 64px);
+}
+.folio-type > div > p:not(.folio-label) {
+  margin: 30px 0;
+  max-width: 500px;
+  color: #555e52;
+  font-size: 18px;
+}
+.folio-colour {
+  padding-bottom: 100px;
+}
+.folio-colour-heading {
+  padding-top: 0;
+  padding-bottom: 65px;
+}
+.folio-colour h2 {
+  font-size: clamp(45px, 6vw, 90px);
+}
+.folio-swatches {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.folio-swatches > div {
+  height: 260px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.folio-colour > .folio-link {
+  margin: 30px 4% 0;
+}
+.folio-elements {
+  padding-top: 50px;
+}
+.folio-element-note {
+  max-width: 570px;
+  margin: 60px 0 80px auto;
+  color: #555e52;
+  font-size: 18px;
+}
+.folio-element-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px 6%;
+  margin-bottom: 60px;
+}
+.folio-identity .nature-element-card {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  overflow: visible;
+}
+.folio-identity .nature-element-card .nature-element-image {
+  height: 450px;
+  margin: 0;
+  border-radius: 50% / 35%;
+  background: #f1f3ee;
+}
+.folio-identity .nature-element-soil .nature-element-image {
+  background: #e8ebe1;
+}
+.folio-identity .nature-element-seeds .nature-element-image {
+  background: #143f26;
+}
+.folio-identity .nature-element-card .nature-element-kind {
+  font-size: 12px;
+  bottom: 20px;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.folio-identity .nature-element-copy {
+  padding: 28px 0 0;
+}
+.folio-identity .nature-element-copy h3 {
+  font-size: 40px;
+}
+.folio-identity .nature-element-headline {
+  font-size: 19px;
+  margin-top: 12px;
+}
+.folio-identity .nature-element-download {
+  color: #143f26;
+}
+.folio-surface-chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  background: #f4f5f2;
+  align-items: center;
+}
+.folio-surface-art {
+  height: 710px;
+}
+.folio-surface-pill {
+  top: 43%;
+  left: 8%;
+  width: 84%;
+}
+.folio-surface-copy {
+  padding: 60px 10% 60px 0;
+}
+.folio-surface-copy h2 {
+  font-size: clamp(40px, 5vw, 75px);
+}
+.folio-surface-copy > p:not(.folio-label) {
+  font-size: 18px;
+  color: #555e52;
+  margin: 35px 0;
+}
+.folio-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: center;
+}
+.folio-icons h2 {
+  font-size: clamp(40px, 4.7vw, 70px);
+  margin-bottom: 35px;
+}
+.folio-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 45px 16px;
+}
+.folio-icon-grid > div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  color: #244e30;
+}
+.folio-icon-grid span {
+  font-size: 13px;
+  color: #475343;
+  text-align: center;
+}
+.folio-identity .folio-applications {
+  border-top: 1px solid #daddd7;
+  padding-top: 90px;
+}
+.folio-applications .brand-section {
+  padding: 0;
+  max-width: none;
+}
+.folio-applications .section-heading h2 {
+  font-size: clamp(45px, 6vw, 90px);
+}
+.folio-applications .section-number {
+  display: none;
+}
+.folio-closing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f4f5f2;
+}
+.folio-closing > div:first-child {
+  padding: 80px 8%;
+  align-self: center;
+}
+.folio-closing h2 {
+  font-size: clamp(38px, 4.3vw, 64px);
+}
+.folio-closing p:not(.folio-label) {
+  margin: 30px 0;
+  font-size: 18px;
+  color: #555e52;
+}
+.folio-closing-photo {
+  min-height: 650px;
+}
+.folio-closing-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #0b241ba0, transparent 60%);
+}
+.folio-closing-photo > .brand-logo {
+  position: absolute;
+  z-index: 1;
+  bottom: 55px;
+  left: 10%;
+  width: 80%;
+  height: auto;
+}
+.folio-closing-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.folio-button {
+  background: #173f26;
+  color: white;
+  border-radius: 50px;
+  padding: 15px 25px;
+  display: inline-block;
+}
+.folio-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 60px 4%;
+  font-size: 14px;
+}
+.folio-footer > .brand-logo {
+  width: 155px;
+  height: auto;
+}
+.folio-footer p {
+  color: #596153;
+}
+@media (min-width: 1800px) {
+  .folio-chapter {
+    padding-left: max(4%, calc((100vw - 1700px) / 2));
+    padding-right: max(4%, calc((100vw - 1700px) / 2));
+  }
+}
+@media (max-width: 1000px) {
+  .folio-cover {
+    min-height: 660px;
+    height: 75svh;
+  }
+  .folio-cover-photo {
+    min-height: 620px;
+  }
+  .folio-chapter {
+    padding: 90px 5%;
+  }
+  .folio-cover-pill,
+  .folio-surface-pill {
+    gap: 12px;
+    padding: 12px;
+  }
+  .folio-pill-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .folio-wide-photo {
+    height: 600px;
+  }
+  .folio-relearning {
+    margin-left: 0;
+  }
+  .folio-identity .story-experience-image {
+    height: 490px;
+  }
+  .folio-identity .story-experience-copy {
+    padding: 20px 0;
+  }
+  .folio-invitation {
+    grid-template-columns: 1fr;
+  }
+  .folio-invitation-heading {
+    padding: 70px 5%;
+  }
+  .folio-invitation h2 br {
+    display: none;
+  }
+  .folio-invitation h2 {
+    max-width: 700px;
+  }
+  .folio-philosophy-stage {
+    min-height: 650px;
+  }
+  .folio-logo-light,
+  .folio-logo-dark {
+    padding: 60px 8%;
+    min-height: 460px;
+  }
+  .folio-swatches > div {
+    padding: 15px;
+    height: 210px;
+    font-size: 14px;
+  }
+  .folio-identity .nature-element-card .nature-element-image {
+    height: 350px;
+  }
+  .folio-surface-art {
+    height: 550px;
+  }
+  .folio-icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 10px;
+  }
+  .folio-closing-photo {
+    min-height: 550px;
+  }
+}
+@media (max-width: 700px) {
+  .folio-cover {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+    gap: 6px;
+  }
+  .folio-cover-photo {
+    height: 77svh;
+    min-height: 540px;
+  }
+  .folio-cover h1 {
+    font-size: clamp(78px, 16vw, 115px);
+    bottom: 17%;
+  }
+  .folio-cover-object {
+    height: 650px;
+    padding: 35px 7%;
+  }
+  .folio-cover-object > p {
+    font-size: 32px;
+  }
+  .folio-cover-oval {
+    height: 76%;
+    width: 85%;
+  }
+  .folio-cover-pill {
+    font-size: 23px;
+  }
+  .folio-chapter {
+    padding: 75px 6%;
+  }
+  .folio-manifesto > .folio-label {
+    position: static;
+    margin-bottom: 30px;
+  }
+  .folio-manifesto h2 {
+    font-size: clamp(38px, 8.8vw, 62px);
+    text-indent: 0;
+    line-height: 1.1;
+  }
+  .folio-side-story {
+    width: 100%;
+    margin: 70px 0;
+  }
+  .folio-side-story h3 {
+    font-size: 38px;
+  }
+  .folio-origin {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+    gap: 30px;
+  }
+  .folio-origin > svg {
+    margin: 0;
+  }
+  .folio-wide-photo {
+    height: 540px;
+  }
+  .folio-wide-pill {
+    left: 7%;
+    width: 86%;
+    padding: 35px;
+  }
+  .folio-wide-pill p {
+    font-size: 48px;
+  }
+  .folio-relearning {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin: 65px 0 35px;
+  }
+  .folio-relearning article + article {
+    border-left: 0;
+    border-top: 1px solid #daddd7;
+    padding: 30px 0 0;
+  }
+  .folio-relearning h3 {
+    margin-bottom: 15px;
+  }
+  .folio-identity .story-experiences {
+    margin-top: 70px;
+    padding-top: 60px;
+  }
+  .folio-identity .story-experiences .terrain-section-intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .folio-identity .story-experience {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .folio-identity .story-experience-grid {
+    gap: 60px;
+  }
+  .folio-identity .story-experience:nth-child(2) .story-experience-image {
+    order: 0;
+  }
+  .folio-identity .story-experience-image {
+    height: 450px;
+  }
+  .folio-identity .story-experience-copy h3 {
+    font-size: 40px;
+  }
+  .folio-identity .story-shared-purpose {
+    display: block;
+    margin-top: 50px;
+  }
+  .folio-identity .story-shared-purpose p {
+    margin-top: 25px;
+    font-size: 27px;
+  }
+  .folio-philosophy-stage {
+    min-height: 620px;
+  }
+  .folio-invitation-heading {
+    padding: 65px 6%;
+  }
+  .folio-invitation h2 {
+    font-size: 42px;
+  }
+  .folio-philosophy-tabs {
+    left: 5%;
+    right: 5%;
+    gap: 6px;
+    justify-content: center;
+  }
+  .folio-identity .terrain-philosophy-card {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+  .folio-philosophy-copy {
+    left: 6%;
+    width: 88%;
+    padding: 40px 30px;
+    border-radius: 65px;
+  }
+  .folio-philosophy-copy h3 {
+    font-size: 54px;
+  }
+  .folio-system-intro h2 {
+    font-size: 55px;
+  }
+  .folio-system-intro > p:last-child {
+    width: 100%;
+    font-size: 18px;
+  }
+  .folio-logo-chapter {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+  .folio-logo-light,
+  .folio-logo-dark {
+    min-height: 400px;
+  }
+  .folio-type {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .folio-type h2 {
+    font-size: 65vw;
+  }
+  .folio-type h3 {
+    font-size: 42px;
+  }
+  .folio-colour {
+    padding-bottom: 55px;
+  }
+  .folio-colour-heading h2 {
+    font-size: 43px;
+  }
+  .folio-swatches {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .folio-swatches > div {
+    height: 170px;
+  }
+  .folio-element-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .folio-element-note {
+    margin: 35px 0 50px;
+  }
+  .folio-identity .nature-element-card .nature-element-image {
+    height: 380px;
+  }
+  .folio-surface-chapter {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .folio-surface-art {
+    height: 520px;
+  }
+  .folio-surface-copy {
+    padding: 60px 6%;
+  }
+  .folio-surface-pill {
+    font-size: 23px;
+  }
+  .folio-icons {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .folio-icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .folio-closing {
+    grid-template-columns: 1fr;
+  }
+  .folio-closing > div:first-child {
+    padding: 65px 6%;
+  }
+  .folio-closing h2 {
+    font-size: 41px;
+  }
+  .folio-closing-photo {
+    min-height: 560px;
+  }
+  .folio-footer {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 45px 6%;
+  }
+  .folio-footer p {
+    width: 100%;
+    order: 3;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .folio-glass {
+    background: #23472c;
+    backdrop-filter: none;
+  }
+}
+@media (forced-colors: active) {
+  .folio-glass,
+  .folio-identity .terrain-philosophy-card {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid CanvasText;
+  }
+}
+
+/* Reset the earlier staggered-card treatment for the new inline tabs. */
+.folio-identity .folio-philosophy-tabs .terrain-philosophy-card {
+  margin: 0;
+  align-self: stretch;
+  min-height: 48px;
+  max-width: none;
+  text-align: center;
+}

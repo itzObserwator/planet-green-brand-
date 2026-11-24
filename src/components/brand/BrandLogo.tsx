@@ -5,19 +5,24 @@ export interface BrandLogoProps {
   variant?: "primary" | "monochrome" | "symbol";
   className?: string;
   compact?: boolean;
+  tone?: "light" | "dark";
 }
 export function BrandLogo({
   variant = "primary",
   className,
   compact = false,
+  tone = "light",
 }: BrandLogoProps) {
-  const src = brandAssets[variant];
+  const src =
+    variant === "primary" && tone === "dark"
+      ? brandAssets.onDark
+      : brandAssets[variant];
   return src ? (
     <Image
-      className={className}
+      className={cn("brand-logo", compact && "brand-logo-compact", className)}
       src={src}
-      width={180}
-      height={64}
+      width={595.279}
+      height={215.189}
       alt="Planet Green"
     />
   ) : (

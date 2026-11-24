@@ -4,7 +4,7 @@ import { SectionHeading } from "./SectionHeading";
 import { Typography } from "./Typography";
 import { typeScale } from "@/lib/brand-tokens";
 export function TypographyShowcase() {
-  const [sample, setSample] = useState("A little closer to nature.");
+  const [sample, setSample] = useState("Indulge. Involve. Impact.");
   const [all, setAll] = useState(false);
   return (
     <section id="typography" className="brand-section">
@@ -25,12 +25,12 @@ export function TypographyShowcase() {
         </div>
         <div className="type-details">
           <div>
-            <strong>Inter</strong>
-            <span>Display fallback + interface</span>
+            <strong>Outfit</strong>
+            <span>Display, body & interface</span>
           </div>
           <div>
-            <strong>Brutel</strong>
-            <span>Pending licensed font files</span>
+            <strong>400 / 500 / 600</strong>
+            <span>Regular, medium & semibold</span>
           </div>
           <div>
             <strong>Fluid by design</strong>

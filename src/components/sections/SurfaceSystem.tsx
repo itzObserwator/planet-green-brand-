@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import {
   ArrowRight,
   Check,
@@ -18,17 +18,17 @@ import {
 export function SurfaceSystem() {
   const [modal, setModal] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [blur, setBlur] = useState(16);
+  const [blur, setBlur] = useState(8);
   return (
     <section id="surfaces" className="brand-section">
       <SectionHeading number="07" title="Light. Layers. Possibility.">
-        A thoughtful surface system.
+        Liquid glass. Soft refraction. Clear content.
       </SectionHeading>
       <div className="surface-grid">
         <GlassImageFrame
           className="surface-scene"
-          src="/imagery/forest.webp"
-          alt="Forest behind a frosted interface surface"
+          src="/imagery/macro.webp"
+          alt="Green plant growth behind a liquid-glass surface"
           overlay={0.25}
         >
           <GlassBadge>
@@ -36,7 +36,7 @@ export function SurfaceSystem() {
           </GlassBadge>
           <GlassCard
             className="surface-demo"
-            style={{ backdropFilter: `blur(${blur}px)` }}
+            style={{ "--liquid-blur": `${blur}px` } as CSSProperties}
             hover
           >
             <span className="demo-icon">
@@ -92,7 +92,7 @@ export function SurfaceSystem() {
             id="surface-blur"
             type="range"
             min="0"
-            max="24"
+            max="40"
             value={blur}
             onChange={(e) => setBlur(Number(e.target.value))}
           />

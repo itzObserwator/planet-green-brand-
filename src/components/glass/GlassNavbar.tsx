@@ -13,9 +13,9 @@ export function GlassNavbar() {
   const [assets, setAssets] = useState(false);
   return (
     <>
-      <header className="site-header">
+      <header className="site-header reference-header bio-header">
         <Link href="/" aria-label="Planet Green home">
-          <BrandLogo compact />
+          <BrandLogo compact tone={path === "/" ? "dark" : "light"} />
         </Link>
         <nav
           className={mobile ? "main-nav open" : "main-nav"}
@@ -35,7 +35,11 @@ export function GlassNavbar() {
           >
             Component library <ArrowUpRight size={13} />
           </Link>
-          <Link href="/#applications" onClick={() => setMobile(false)}>
+          <Link
+            href="/applications/"
+            aria-current={path.startsWith("/applications") ? "page" : undefined}
+            onClick={() => setMobile(false)}
+          >
             In the world
           </Link>
         </nav>
@@ -57,13 +61,20 @@ export function GlassNavbar() {
         title="Brand asset library"
       >
         <p className="muted">
-          An honest starting point. Original artwork has not been supplied, so
-          no logo downloads are presented as approved.
+          Original Planet Green artwork, with its geometry and colours
+          preserved. Single-colour and standalone symbol artwork remain pending.
+        </p>
+        <p>
+          <Link href="/explorer/?tab=artwork" onClick={() => setAssets(false)}>
+            The Act of Giving Back / Artwork & downloads
+          </Link>
         </p>
         <div className="asset-list">
           {[
             ["Primary logo · SVG", brandAssets.primary],
             ["Primary logo · PNG", brandAssets.primaryPng],
+            ["Light-letter logo · SVG", brandAssets.onDark],
+            ["Light-letter logo · PNG", brandAssets.onDarkPng],
             ["Single-colour artwork", brandAssets.monochrome],
             ["Symbol artwork", brandAssets.symbol],
           ].map(([name, url]) => (
@@ -83,10 +94,11 @@ export function GlassNavbar() {
           className="button dark"
           onClick={() =>
             downloadText(
-              "planet-green-PROVISIONAL-tokens.json",
+              "planet-green-logo-colours.json",
               JSON.stringify(
                 {
-                  status: "PROVISIONAL — not sampled from logo or approved",
+                  status:
+                    "Sampled from original logo SVG; usage roles are design guidance",
                   palette,
                 },
                 null,
@@ -96,11 +108,11 @@ export function GlassNavbar() {
             )
           }
         >
-          Download draft tokens <ArrowDownToLine size={16} />
+          Download colour tokens <ArrowDownToLine size={16} />
         </button>
         <p className="fine-print">
-          Draft tokens are for interface exploration only. See the guidelines
-          for asset handoff.
+          Green values come from the original SVG fills. See the guidelines for
+          colour usage and the remaining approval requirements.
         </p>
       </GlassModal>
     </>

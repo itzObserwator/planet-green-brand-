@@ -1,0 +1,1454 @@
+/* Landscape direction: white editorial space, tactile greenery and quiet glass. */
+body:has(.terrain-identity) {
+  background: #fff;
+}
+.terrain-identity {
+  background: #fff;
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 1.6;
+  --terrain-dark: #10271a;
+}
+.terrain-identity h1,
+.terrain-identity h2,
+.terrain-identity h3 {
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+  margin: 0;
+}
+.terrain-identity p {
+  margin: 0;
+}
+.terrain-wrap {
+  width: calc(100% - 112px);
+  max-width: 1440px;
+  margin-inline: auto;
+}
+.terrain-scene {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.terrain-scene > img:not(.brand-logo) {
+  object-fit: cover;
+  z-index: -2;
+}
+.terrain-shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(100deg, rgba(9, 30, 17, 0.8), rgba(9, 30, 17, 0.15)),
+    linear-gradient(0deg, rgba(8, 25, 14, 0.45), transparent 55%);
+}
+.terrain-grid-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 24.9%,
+      #ffffff18 25%,
+      transparent 25.1%,
+      transparent 74.9%,
+      #ffffff18 75%,
+      transparent 75.1%
+    ),
+    linear-gradient(transparent 74.9%, #ffffff18 75%, transparent 75.1%);
+}
+.terrain-hero {
+  margin: 0 20px;
+  border-radius: 28px;
+  min-height: 780px;
+  height: calc(100svh - 115px);
+  max-height: 1000px;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 110px 7%;
+}
+.terrain-hero > img {
+  object-position: 50% 65%;
+}
+.terrain-hero-top,
+.terrain-hero-bottom {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.terrain-hero-top {
+  top: 30px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.terrain-hero-bottom {
+  bottom: 30px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.terrain-hero-bottom a {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff60;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.terrain-hero-copy {
+  width: 65%;
+}
+.terrain-glass-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 7px 13px;
+  border: 1px solid #ffffff30;
+  background: #ffffff18;
+  backdrop-filter: blur(16px);
+  border-radius: 30px;
+  font-size: 13px;
+}
+.terrain-hero h1 {
+  font-size: clamp(76px, 8.8vw, 142px);
+  margin: 24px 0;
+  letter-spacing: -0.065em;
+  line-height: 0.96;
+  color: white;
+}
+.terrain-hero-copy > p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+.terrain-white-button,
+.terrain-dark-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  padding: 12px 22px;
+  background: white;
+  color: #15331d;
+  font-size: 14px;
+}
+.terrain-dark-button {
+  background: #156b37;
+  color: white;
+}
+.terrain-frost {
+  background: linear-gradient(135deg, #c3d0a550, #203a2370);
+  border: 1px solid #ffffff60;
+  box-shadow:
+    0 16px 50px #0b23121c,
+    inset 0 1px #ffffff20;
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+.terrain-hero-note {
+  width: 300px;
+  padding: 28px;
+  border-radius: 24px;
+  margin-left: auto;
+  transform: translateY(40px);
+}
+.terrain-hero-note > span {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+.terrain-hero-note h2 {
+  font-size: 44px;
+  margin: 25px 0;
+}
+.terrain-hero-note p {
+  font-size: 14px;
+}
+.terrain-rhythm {
+  display: block;
+  width: 100%;
+  height: 95px;
+  margin: 8px 0 15px;
+}
+.terrain-eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+.terrain-purpose {
+  padding-block: 120px 90px;
+}
+.terrain-statement {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 10%;
+  margin-top: 32px;
+  align-items: end;
+}
+.terrain-statement h2,
+.terrain-section-intro h2,
+.terrain-closing h2 {
+  font-size: clamp(40px, 4.7vw, 76px);
+}
+.terrain-statement h2 span {
+  color: #6c7b61;
+}
+.terrain-statement > div p {
+  max-width: 450px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #586052;
+}
+.terrain-link {
+  display: inline-block;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 5px;
+  font-size: 14px;
+  line-height: 1.5;
+  width: fit-content;
+}
+.terrain-link:hover {
+  opacity: 0.75;
+}
+.terrain-principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8%;
+  margin: 95px 0 10px;
+  padding-left: 28%;
+}
+.terrain-principle-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #eef2e8;
+  color: #156b37;
+  margin-bottom: 23px;
+}
+.terrain-principles h3 {
+  font-size: 26px;
+  margin-bottom: 13px;
+}
+.terrain-principles p {
+  font-size: 15px;
+  color: #596251;
+  max-width: 220px;
+}
+.terrain-section-intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 10%;
+  align-items: end;
+  margin-bottom: 45px;
+}
+.terrain-section-intro .terrain-eyebrow {
+  margin-bottom: 24px;
+}
+.terrain-section-intro > p,
+.terrain-section-intro > div > p:not(.terrain-eyebrow) {
+  color: #586052;
+  line-height: 1.8;
+  max-width: 460px;
+}
+.terrain-section-intro .terrain-link {
+  margin-top: 20px;
+}
+.terrain-system {
+  padding-block: 45px 100px;
+}
+.terrain-specimens {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.terrain-specimen-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+}
+.terrain-specimen {
+  padding: 28px;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+}
+.terrain-card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 13px;
+}
+.terrain-type {
+  background: #141d0e;
+  color: #e4edca;
+  min-height: 370px;
+}
+.terrain-aa {
+  font-size: clamp(130px, 15vw, 240px);
+  line-height: 1.1;
+  letter-spacing: -0.08em;
+  padding-block: 25px;
+  background: linear-gradient(140deg, #f6f9e5, #849964);
+  color: transparent;
+  background-clip: text;
+}
+.terrain-type .terrain-eyebrow {
+  color: #e4edca;
+}
+.terrain-surface {
+  min-height: 430px;
+  background: #d7dfc8;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+}
+.terrain-surface > img {
+  object-position: 60%;
+}
+.terrain-surface-glass {
+  border-radius: 22px;
+  padding: 26px;
+  width: 100%;
+  color: #fff;
+  background: #183622a8;
+  margin-bottom: 25px;
+}
+.terrain-surface-glass h2 {
+  font-size: 34px;
+  margin: 20px 0;
+}
+.terrain-surface-glass p {
+  font-size: 14px;
+}
+.terrain-surface > .terrain-link {
+  background: #fff;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 20px;
+}
+.terrain-icons {
+  background: #f1f4ed;
+}
+.terrain-icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 10px;
+  margin: 36px 0;
+}
+.terrain-icon-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #274c32;
+}
+.terrain-icon-grid span {
+  font-size: 12px;
+  color: #36442e;
+  text-align: center;
+}
+.terrain-campaign {
+  min-height: 680px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.terrain-campaign > img {
+  object-position: 66% center;
+}
+.terrain-campaign .terrain-shade {
+  background:
+    linear-gradient(0deg, #0a2516c4, transparent 75%),
+    linear-gradient(#092a1860, transparent 40%);
+}
+.terrain-campaign-copy h2 {
+  font-size: clamp(38px, 4.2vw, 66px);
+  margin: 23px 0 28px;
+}
+.terrain-signature {
+  background: #10251b;
+  color: white;
+  min-height: 330px;
+}
+.terrain-signature .brand-logo {
+  width: 100%;
+  max-width: 330px;
+  margin: 35px auto 20px;
+}
+.terrain-signature > p:not(.terrain-eyebrow) {
+  font-size: 14px;
+  color: #d6dfd0;
+}
+.terrain-signature .download-group {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0;
+}
+.terrain-signature .download-group a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ffffff60;
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  color: white;
+}
+.terrain-graphics {
+  background: #e8ede0;
+  min-height: 365px;
+  color: #193c25;
+}
+.terrain-contour-study {
+  height: 190px;
+  overflow: hidden;
+  border-radius: 55% 40% 48% 45%;
+  background: linear-gradient(130deg, #b5d5a1, #758d61);
+  margin: 20px 0;
+  transform: rotate(-12deg);
+}
+.terrain-contour-study svg {
+  width: 100%;
+  height: 100%;
+}
+.terrain-graphics h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.terrain-colour {
+  padding: 2px 0 12px;
+}
+.terrain-palette {
+  display: flex;
+  overflow: hidden;
+  border-radius: 40px;
+  height: 38px;
+  margin-bottom: 12px;
+  border: 1px solid #e8ede4;
+}
+.terrain-palette > div {
+  flex: 1;
+}
+.terrain-colour .terrain-link {
+  margin-left: 10px;
+  font-size: 13px;
+}
+.terrain-phone-card {
+  padding: 30px 25px 0;
+  background: #e0e3dc;
+  border-radius: 26px;
+  height: 520px;
+  overflow: hidden;
+  position: relative;
+}
+.terrain-phone {
+  background: white;
+  border: 7px solid #1d211b;
+  border-bottom: 0;
+  border-radius: 46px 46px 0 0;
+  padding: 18px;
+  min-height: 550px;
+  box-shadow: 0 0 0 2px #a9ada4;
+}
+.terrain-phone-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin: 0 0 25px;
+}
+.terrain-phone .brand-logo {
+  width: 130px;
+  margin-bottom: 28px;
+}
+.terrain-phone h3 {
+  font-size: 34px;
+}
+.terrain-phone p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 18px 0;
+}
+.terrain-phone-image {
+  height: 170px;
+  border-radius: 17px;
+}
+.terrain-phone-image span {
+  position: absolute;
+  bottom: 16px;
+  left: 12px;
+  background: #15391ebf;
+  color: white;
+  padding: 4px 7px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.terrain-phone a {
+  display: block;
+  font-size: 12px;
+  margin: 20px 0;
+}
+.terrain-phone-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #e0e3dc;
+  padding: 14px 20px;
+  font-size: 12px;
+  text-align: center;
+}
+.terrain-philosophy {
+  margin: 0 20px;
+  border-radius: 28px;
+  min-height: 750px;
+  color: white;
+  padding: 38px 5% 25px;
+}
+.terrain-philosophy > img {
+  object-position: 50% 70%;
+}
+.terrain-philosophy .terrain-shade {
+  background: linear-gradient(#112c1840, #0b2114a8);
+}
+.terrain-philosophy-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.terrain-philosophy-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6%;
+  align-items: start;
+  margin: 110px 0 85px;
+}
+.terrain-philosophy-card {
+  padding: 25px;
+  border-radius: 23px;
+  text-align: left;
+  color: white;
+  transition:
+    transform 0.3s,
+    background 0.3s;
+  cursor: pointer;
+  min-width: 0;
+  font-family: inherit;
+}
+.terrain-philosophy-card:nth-child(2) {
+  margin-top: -45px;
+}
+.terrain-philosophy-card:nth-child(3) {
+  margin-top: 30px;
+}
+.terrain-philosophy-card.is-active {
+  transform: translateY(-15px);
+  background: linear-gradient(140deg, #8c9f6de8, #1b3928e8);
+  border-color: #f0f6de;
+}
+.terrain-philosophy-card > span {
+  font-size: 12px;
+}
+.terrain-philosophy-card h3 {
+  font-size: 42px;
+  margin: 24px 0 8px;
+}
+.terrain-philosophy-card p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.terrain-carousel-controls {
+  display: grid;
+  grid-template-columns: 48px 100px 1fr 48px;
+  align-items: center;
+  gap: 30px;
+}
+.terrain-carousel-controls > button {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffff70;
+  border-radius: 50%;
+  background: #d7e1c933;
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(15px);
+}
+.terrain-carousel-controls p {
+  max-width: 450px;
+  font-size: 14px;
+}
+.terrain-slide-count {
+  font-size: 13px;
+}
+.terrain-concept-caption {
+  display: block;
+  font-size: 12px;
+  margin-top: 35px;
+  text-align: right;
+  color: #ecf1e6;
+}
+.terrain-portfolio {
+  padding-block: 120px 75px;
+}
+.terrain-portfolio-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 24px;
+}
+.terrain-portfolio-card {
+  min-height: 420px;
+  border-radius: 26px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: #17331e;
+}
+.terrain-portfolio-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(#102a174d, transparent 30%, #0f2c1755);
+  z-index: -1;
+}
+.terrain-project-category {
+  font-size: 12px;
+  width: fit-content;
+  border-radius: 25px;
+  padding: 5px 12px;
+  background: #142b20bd;
+}
+.terrain-project-copy {
+  padding: 23px;
+  border-radius: 20px;
+  background: #172e21c9;
+}
+.terrain-project-copy h3 {
+  font-size: 35px;
+}
+.terrain-project-copy p {
+  font-size: 14px;
+  line-height: 1.65;
+  margin: 12px 0 18px;
+  max-width: 390px;
+}
+.terrain-project-copy > span {
+  font-size: 12px;
+  border-bottom: 1px solid #ffffff70;
+}
+.terrain-asset-note {
+  font-size: 12px;
+  color: #596351;
+  margin-top: 18px !important;
+}
+.terrain-applications {
+  padding-bottom: 80px;
+}
+.terrain-applications .brand-section {
+  padding: 40px 0;
+  border: 0;
+}
+.terrain-applications .section-heading {
+  margin-bottom: 36px;
+}
+.terrain-applications .section-heading h2 {
+  font-size: clamp(40px, 4.7vw, 76px);
+  font-weight: 400;
+}
+.terrain-applications .section-number {
+  display: none;
+}
+.terrain-applications .tabs {
+  background: #eef2e8;
+  border: 0;
+  padding: 6px;
+  border-radius: 30px;
+}
+.terrain-applications .tabs button {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #2d422a;
+}
+.terrain-applications .tabs button[aria-selected="true"] {
+  color: white;
+  background: #156b37;
+}
+.terrain-applications .website-mockup {
+  border-radius: 26px;
+}
+.terrain-closing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  padding-block: 70px 100px;
+  border-top: 1px solid #dfe5d9;
+  align-items: center;
+}
+.terrain-closing h2 {
+  margin: 25px 0 30px;
+}
+.terrain-closing-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.terrain-closing-art {
+  height: 440px;
+  border-radius: 26px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #15351e;
+  color: white;
+}
+.terrain-closing-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #092f1870;
+  z-index: -1;
+}
+.terrain-closing-art .brand-logo {
+  position: relative;
+  z-index: 1;
+  width: 250px;
+}
+.terrain-closing-art p {
+  font-size: clamp(40px, 5vw, 70px);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+.terrain-footer {
+  border-top: 1px solid #dfe5d9;
+  padding-block: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.terrain-footer .brand-logo {
+  width: 160px;
+}
+/* The working tools share the same quieter landscape direction. */
+.collection-shell .collection-hero-copy,
+.collection-shell .collection-hero-art {
+  border-radius: 26px;
+}
+.collection-shell .collection-hero-copy {
+  background: #f0f3eb;
+}
+.collection-shell .collection-hero-copy > p {
+  font-size: 16px;
+}
+.collection-shell .collection-glass {
+  border-radius: 24px;
+  background: #193420a8;
+}
+.collection-shell .collection-kicker,
+.collection-shell .collection-running,
+.collection-shell .collection-hero-facts > span {
+  font-size: 12px;
+}
+.collection-shell .library-item {
+  border-radius: 24px;
+}
+.collection-shell .collection-world-hero .collection-hero-copy {
+  background: #102c1c;
+}
+.collection-shell .collection-world-hero .collection-hero-copy > p {
+  color: #e0ebd5;
+}
+@media (min-width: 1600px) {
+  .terrain-hero,
+  .terrain-philosophy {
+    max-width: 1552px;
+    margin-inline: auto;
+  }
+}
+@media (max-width: 1050px) {
+  .terrain-wrap {
+    width: calc(100% - 64px);
+  }
+  .terrain-hero {
+    min-height: 720px;
+    padding-inline: 6%;
+  }
+  .terrain-hero-note {
+    width: 250px;
+    padding: 22px;
+  }
+  .terrain-hero-note h2 {
+    font-size: 38px;
+  }
+  .terrain-hero-copy {
+    width: 60%;
+  }
+  .terrain-principles {
+    padding-left: 15%;
+    gap: 7%;
+  }
+  .terrain-specimens {
+    gap: 16px;
+  }
+  .terrain-specimen-column {
+    gap: 16px;
+  }
+  .terrain-specimen {
+    padding: 22px;
+  }
+  .terrain-campaign {
+    min-height: 600px;
+  }
+  .terrain-icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .terrain-phone-card {
+    padding: 26px 16px 0;
+  }
+  .terrain-phone {
+    padding: 14px;
+  }
+  .terrain-phone h3 {
+    font-size: 27px;
+  }
+  .terrain-philosophy-cards {
+    gap: 3%;
+  }
+  .terrain-philosophy-card {
+    padding: 20px;
+  }
+  .terrain-philosophy-card h3 {
+    font-size: 35px;
+  }
+  .terrain-philosophy-card > span {
+    font-size: 12px;
+  }
+  .terrain-portfolio-card {
+    min-height: 380px;
+  }
+  .terrain-project-copy h3 {
+    font-size: 29px;
+  }
+}
+@media (max-width: 700px) {
+  .terrain-wrap {
+    width: calc(100% - 40px);
+  }
+  .terrain-hero {
+    margin: 0 10px;
+    padding: 100px 26px 125px;
+    height: auto;
+    min-height: 900px;
+    border-radius: 23px;
+    display: block;
+  }
+  .terrain-hero-top {
+    left: 26px;
+    right: 26px;
+    top: 25px;
+    font-size: 12px;
+  }
+  .terrain-hero-top > span:last-child {
+    display: none;
+  }
+  .terrain-hero-copy {
+    width: 100%;
+  }
+  .terrain-hero h1 {
+    font-size: clamp(66px, 15vw, 105px);
+  }
+  .terrain-hero-copy > p {
+    font-size: 16px;
+  }
+  .terrain-hero-note {
+    width: 100%;
+    max-width: 330px;
+    transform: none;
+    margin: 45px 0 0 auto;
+    padding: 22px;
+  }
+  .terrain-hero-note h2 {
+    font-size: 34px;
+    margin: 20px 0;
+  }
+  .terrain-hero-note .terrain-rhythm {
+    height: 50px;
+  }
+  .terrain-hero-note p {
+    font-size: 13px;
+  }
+  .terrain-hero-bottom {
+    left: 26px;
+    right: 26px;
+    font-size: 12px;
+  }
+  .terrain-hero-bottom p:nth-child(2) {
+    display: none;
+  }
+  .terrain-glass-tag {
+    font-size: 12px;
+  }
+  .terrain-purpose {
+    padding-block: 75px 40px;
+  }
+  .terrain-statement,
+  .terrain-section-intro {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .terrain-statement h2,
+  .terrain-section-intro h2,
+  .terrain-closing h2 {
+    font-size: 44px;
+  }
+  .terrain-statement > div p {
+    font-size: 16px;
+  }
+  .terrain-principles {
+    padding-left: 0;
+    gap: 24px;
+    margin: 50px 0 10px;
+    grid-template-columns: 1fr;
+  }
+  .terrain-principles > div {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 8px 20px;
+  }
+  .terrain-principle-icon {
+    grid-row: span 2;
+    width: 54px;
+    height: 54px;
+    margin: 0;
+  }
+  .terrain-principles h3 {
+    font-size: 25px;
+    margin: 2px 0 0;
+  }
+  .terrain-principles p {
+    max-width: none;
+  }
+  .terrain-system {
+    padding-block: 35px 70px;
+  }
+  .terrain-section-intro {
+    margin-bottom: 32px;
+  }
+  .terrain-section-intro .terrain-eyebrow {
+    margin-bottom: 18px;
+  }
+  .terrain-specimens {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .terrain-specimen-column {
+    gap: 20px;
+  }
+  .terrain-specimen {
+    padding: 28px;
+    border-radius: 24px;
+  }
+  .terrain-aa {
+    font-size: 200px;
+  }
+  .terrain-type {
+    min-height: 350px;
+  }
+  .terrain-campaign {
+    min-height: 570px;
+  }
+  .terrain-campaign-copy h2 {
+    font-size: 56px;
+  }
+  .terrain-icon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .terrain-surface {
+    min-height: 400px;
+  }
+  .terrain-phone-card {
+    max-height: 510px;
+    padding-inline: 40px;
+  }
+  .terrain-phone h3 {
+    font-size: 34px;
+  }
+  .terrain-colour {
+    margin-block: 4px;
+  }
+  .terrain-philosophy {
+    margin: 0 10px;
+    min-height: 660px;
+    padding: 28px 24px;
+    border-radius: 23px;
+  }
+  .terrain-philosophy-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .terrain-philosophy-cards {
+    display: block;
+    margin: 60px 0 40px;
+  }
+  .terrain-philosophy-card {
+    display: none;
+    max-width: 360px;
+    min-height: 285px;
+    margin-inline: auto;
+  }
+  .terrain-philosophy-card.is-active {
+    display: block;
+    transform: none;
+    margin-top: 0;
+  }
+  .terrain-philosophy-card h3 {
+    font-size: 42px;
+  }
+  .terrain-philosophy-card > span {
+    font-size: 12px;
+  }
+  .terrain-carousel-controls {
+    grid-template-columns: 44px 1fr 44px;
+    gap: 18px;
+  }
+  .terrain-carousel-controls p {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    min-height: 48px;
+  }
+  .terrain-carousel-controls > button:last-child {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .terrain-carousel-controls .terrain-slide-count {
+    text-align: center;
+  }
+  .terrain-concept-caption {
+    font-size: 12px;
+    margin-top: 25px;
+  }
+  .terrain-portfolio {
+    padding-block: 75px 45px;
+  }
+  .terrain-portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .terrain-portfolio-card {
+    min-height: 370px;
+    padding: 20px;
+  }
+  .terrain-project-copy {
+    padding: 20px;
+  }
+  .terrain-project-copy h3 {
+    font-size: 32px;
+  }
+  .terrain-applications {
+    padding-bottom: 35px;
+  }
+  .terrain-applications .tabs {
+    border-radius: 20px;
+    flex-wrap: wrap;
+  }
+  .terrain-applications .tabs button {
+    padding: 8px 13px;
+    font-size: 13px;
+  }
+  .terrain-closing {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 45px 60px;
+  }
+  .terrain-closing-art {
+    height: 350px;
+    padding: 28px;
+  }
+  .terrain-closing-art p {
+    font-size: 48px;
+  }
+  .terrain-closing-links {
+    gap: 20px;
+  }
+  .terrain-footer {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .terrain-footer .brand-logo {
+    width: 150px;
+  }
+  .terrain-footer p {
+    flex-basis: 100%;
+    order: 3;
+  }
+  .collection-shell .collection-hero-copy > p {
+    font-size: 15px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .terrain-philosophy-card {
+    transition: none;
+  }
+}
+
+.terrain-applications .section-label > span {
+  display: none;
+}
+.terrain-applications .mini-hero::after,
+.world-workbench .mini-hero::after {
+  background: linear-gradient(90deg, #092b19d4, #092b1933);
+}
+.terrain-applications .mini-nav > span {
+  font-size: 12px;
+}
+.terrain-applications .mini-copy > .eyebrow {
+  font-size: 12px;
+}
+.terrain-applications .mini-copy p {
+  font-size: 14px;
+  opacity: 1;
+}
+.terrain-applications .mini-copy > a {
+  font-size: 14px;
+}
+.terrain-applications .preview-controls > span {
+  font-size: 12px;
+}
+.terrain-applications .section-description {
+  font-size: 14px;
+}
+.collection-shell .collection-glass > span,
+.collection-shell .collection-art-caption {
+  font-size: 12px;
+}
+@media (max-width: 700px) {
+  .terrain-applications .mini-nav > span {
+    display: none;
+  }
+}
+.terrain-vision-note {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 40px;
+  padding: 36px;
+  margin-top: 65px;
+  border-radius: 24px;
+  background: #f0f3eb;
+}
+.terrain-vision-note h3 {
+  font-size: 27px;
+  margin: 20px 0 6px;
+}
+.terrain-vision-note > div > span {
+  font-size: 13px;
+  color: #52604d;
+}
+.terrain-vision-note > div > p:not(.terrain-eyebrow) {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #44533d;
+  margin-top: 20px;
+}
+.terrain-vision-note .terrain-link {
+  margin-top: 20px;
+}
+@media (max-width: 700px) {
+  .terrain-vision-note {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 25px;
+    margin-top: 45px;
+  }
+}
+
+/* The vision is expressed through photography and type. */
+.terrain-nature-words {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin: 30px 0;
+  padding-block: 18px;
+  border-block: 1px solid #ffffff40;
+}
+.terrain-earth-story {
+  margin-top: 45px;
+}
+.terrain-nature-photographs {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 18px;
+}
+.terrain-nature-photographs > div {
+  height: 300px;
+  border-radius: 24px;
+}
+.terrain-nature-photographs > div:nth-child(2) {
+  margin-top: 45px;
+}
+.terrain-nature-photographs > div:nth-child(3) {
+  margin-top: 20px;
+}
+.terrain-earth-captions {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr;
+  gap: 18px;
+  padding-top: 24px;
+}
+.terrain-earth-captions h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+.terrain-earth-captions p {
+  font-size: 14px;
+  color: #52604d;
+}
+.terrain-earth-story + .terrain-principles {
+  margin-top: 70px;
+  padding-left: 4%;
+  gap: 8%;
+}
+.terrain-soil-photo {
+  height: 210px;
+  border-radius: 18px;
+  margin-block: 22px;
+}
+.terrain-philosophy-photo {
+  height: 100px;
+  border-radius: 14px;
+  margin: 22px 0;
+}
+.library-landscape .language-art {
+  display: flex;
+  flex-direction: column;
+}
+.language-nature-photo {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 18px;
+  margin-bottom: 25px;
+}
+.language-nature-photo > img {
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  .terrain-earth-story {
+    margin-top: 35px;
+  }
+  .terrain-nature-photographs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 9px;
+  }
+  .terrain-nature-photographs > div {
+    height: 170px;
+    border-radius: 16px;
+  }
+  .terrain-nature-photographs > div:nth-child(2) {
+    margin-top: 25px;
+  }
+  .terrain-earth-captions {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding-top: 25px;
+  }
+  .terrain-earth-captions > div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: 1px solid #e1e7d9;
+    padding-bottom: 15px;
+  }
+  .terrain-earth-captions h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .terrain-earth-captions p {
+    font-size: 13px;
+    max-width: 145px;
+    text-align: right;
+  }
+  .terrain-earth-story + .terrain-principles {
+    padding-left: 0;
+    margin-top: 45px;
+  }
+}
+/* Purpose, relearning and two connected experiences lead the identity. */
+.story-relearning {
+  margin-top: 75px;
+  border-top: 1px solid #dce3d5;
+  padding-top: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+.story-relearning-heading h3 {
+  font-size: clamp(34px, 3.7vw, 52px);
+  margin: 22px 0;
+}
+.story-relearning-heading > p:last-child {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #52604d;
+  max-width: 450px;
+}
+.story-relearning-steps > div {
+  padding: 23px 0;
+  border-bottom: 1px solid #dce3d5;
+}
+.story-relearning-steps > div:first-child {
+  padding-top: 0;
+}
+.story-relearning-steps h4 {
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin: 0 0 13px;
+  line-height: 1.2;
+}
+.story-relearning-steps p {
+  color: #52604d;
+  line-height: 1.75;
+  font-size: 15px;
+}
+.story-experiences {
+  padding-block: 45px 90px;
+}
+.story-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+.story-experience {
+  border-radius: 26px;
+  overflow: hidden;
+  background: #f0f3eb;
+}
+.story-experience-image {
+  height: 330px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.story-experience-image > img {
+  object-fit: cover;
+}
+.story-experience-image > span {
+  position: absolute;
+  bottom: 23px;
+  left: 28px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  background: #143a24cf;
+  color: white;
+  backdrop-filter: blur(12px);
+  font-size: 13px;
+}
+.story-experience-copy {
+  padding: 32px;
+}
+.story-experience-copy h3 {
+  font-size: clamp(32px, 3vw, 44px);
+  margin: 24px 0;
+  max-width: 480px;
+}
+.story-experience-copy > p:not(.terrain-eyebrow) {
+  font-size: 16px;
+  color: #4e5c46;
+  line-height: 1.85;
+}
+.story-experience-practice {
+  padding-block: 20px;
+  border-top: 1px solid #cbd7bf;
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #315638;
+}
+.story-shared-purpose {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 32px 0;
+  margin-top: 20px;
+  border-bottom: 1px solid #dce3d5;
+}
+.story-shared-purpose > span {
+  font-size: clamp(25px, 2.7vw, 38px);
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+.story-shared-purpose > p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #52604d;
+}
+.story-closing-copy {
+  font-size: 16px;
+  color: #52604d;
+  line-height: 1.8;
+  margin-bottom: 25px !important;
+  max-width: 380px;
+}
+.story-guideline-title {
+  font-size: 30px !important;
+  line-height: 1.15;
+  margin-top: 35px;
+}
+@media (max-width: 700px) {
+  .story-relearning {
+    margin-top: 45px;
+    padding-top: 32px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .story-relearning-heading h3 {
+    font-size: 38px;
+  }
+  .story-relearning-steps h4 {
+    font-size: 25px;
+  }
+  .story-experiences {
+    padding-block: 15px 65px;
+  }
+  .story-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .story-experience-image {
+    height: 260px;
+  }
+  .story-experience-image > span {
+    left: 23px;
+    bottom: 20px;
+    font-size: 12px;
+  }
+  .story-experience-copy {
+    padding: 25px;
+  }
+  .story-experience-copy h3 {
+    font-size: 35px;
+  }
+  .story-shared-purpose {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

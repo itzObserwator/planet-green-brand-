@@ -20,7 +20,7 @@ export function Footer() {
         <span>
           Identity study / 2026
           <br />
-          Original assets & brand approval pending.
+          Original logo integrated · applications under review.
         </span>
         <a href="#top">
           Back to the top <ArrowUp size={16} />

@@ -1,41 +1,41 @@
-/** Provisional interface study. No supplied logo exists to sample. Never treat these as approved brand colours. */
+/** Greens read from the original Planet Green SVG at planetgreen.co.in/assets/img/logo-dark.svg. Usage roles remain design guidance. */
 export const palette = [
   {
     name: "Forest",
     label: "Primary Forest Green",
-    hex: "#173D2A",
+    hex: "#156B37",
     css: "--pg-green-primary",
     usage: "Feature panels & primary actions",
-    status: "provisional",
+    status: "sampled from original logo",
   },
   {
     name: "Fern",
     label: "Secondary Green",
-    hex: "#42734B",
+    hex: "#50AD47",
     css: "--pg-green-secondary",
     usage: "Supporting surfaces & large graphics",
-    status: "provisional",
+    status: "sampled from original logo",
   },
   {
     name: "Leaf",
     label: "Leaf Green",
-    hex: "#B7D598",
+    hex: "#B5D5A1",
     css: "--pg-green-leaf",
     usage: "Highlights on dark surfaces",
-    status: "provisional",
+    status: "sampled from original logo",
   },
   {
     name: "Mist",
     label: "Light Green",
-    hex: "#E2E9DC",
+    hex: "#E8F0E1",
     css: "--pg-green-light",
     usage: "Quiet supporting surfaces",
-    status: "provisional",
+    status: "sampled from original logo",
   },
   {
     name: "Ink",
     label: "Dark Charcoal",
-    hex: "#202720",
+    hex: "#1E1E1E",
     css: "--pg-ink",
     usage: "Body text & neutral dark surfaces",
     status: "interface neutral",
@@ -146,8 +146,10 @@ export const typeScale = [
 ] as const;
 export const brandAssets = {
   // Populate only with supplied, approved files. Geometry and colours must be preserved.
-  primary: null as string | null,
-  primaryPng: null as string | null,
+  primary: "/brand/planet-green-original.svg" as string | null,
+  primaryPng: "/brand/planet-green-original.png" as string | null,
+  onDark: "/brand/planet-green-on-dark.svg" as string | null,
+  onDarkPng: "/brand/planet-green-on-dark.png" as string | null,
   monochrome: null as string | null,
   symbol: null as string | null,
 };

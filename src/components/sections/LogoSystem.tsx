@@ -37,18 +37,18 @@ export function LogoSystem() {
           </div>
           <div className="logo-stage">
             <div className="clearspace">
-              <BrandLogo />
+              <BrandLogo tone={dark ? "dark" : "light"} />
               <span className="clearspace-label">
                 Illustrative clear space · pending validation
               </span>
             </div>
           </div>
           <div className="panel-bottom">
-            <span>Original artwork required</span>
+            <span>Original vector artwork · colours preserved</span>
             <div className="download-group">
               {[
-                ["SVG", brandAssets.primary],
-                ["PNG", brandAssets.primaryPng],
+                ["SVG", dark ? brandAssets.onDark : brandAssets.primary],
+                ["PNG", dark ? brandAssets.onDarkPng : brandAssets.primaryPng],
               ].map(([label, url]) =>
                 url ? (
                   <a href={url} download key={label}>
@@ -76,11 +76,11 @@ export function LogoSystem() {
           <div className="logo-small symbol-preview">
             <span className="eyebrow">Original symbol</span>
             <div className="symbol-pending">
-              Artwork
+              Standalone
               <br />
-              awaited<span>Original globe geometry preserved on supply</span>
+              symbol<span>Original globe present in the full logo</span>
             </div>
-            <span className="status-tag">Pending vector artwork</span>
+            <span className="status-tag">Standalone use pending approval</span>
           </div>
         </div>
       </div>

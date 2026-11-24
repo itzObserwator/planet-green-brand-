@@ -7,29 +7,44 @@ import {
   Waves,
 } from "lucide-react";
 import { SectionHeading } from "@/components/brand/SectionHeading";
-import { NatureMask, ContourLines } from "@/components/graphics/Patterns";
+import Image from "next/image";
+import { brandContext } from "@/lib/brand-context";
 const principles = [
-  [Leaf, "Nature-forward", "The living world leads the story."],
-  [MoveUpRight, "Modern & premium", "Confidence through restraint."],
-  [Waves, "Organic & fluid", "Movement with a natural rhythm."],
-  [Users, "Human-centred", "Warmth, clarity and belonging."],
-  [Layers, "Layered & immersive", "Depth that invites discovery."],
+  [Leaf, "Indulge", brandContext.philosophy[0].description],
+  [MoveUpRight, "Involve", brandContext.philosophy[1].description],
+  [Waves, "Impact", brandContext.philosophy[2].description],
+  [
+    Users,
+    "Families & community",
+    "Connect urban Indian families with green eco-habitats.",
+  ],
+  [
+    Layers,
+    "One parent brand",
+    "Dates County, Farm Natura, Green Land Capital and Veda Bharat.",
+  ],
 ] as const;
 export function VisualLanguage() {
   return (
     <section id="language" className="brand-section">
       <SectionHeading number="06" title="A language of living">
-        Five principles. One connected world.
+        Indulge. Involve. Impact. A shared relationship with the land.
       </SectionHeading>
       <div className="language-grid">
         <div className="language-art">
-          <ContourLines opacity={0.25} />
-          <NatureMask src="/imagery/macro.webp" />
+          <div className="language-nature-photo">
+            <Image
+              src="/imagery/macro.webp"
+              alt="Fresh green foliage"
+              fill
+              sizes="(max-width: 700px) 100vw, 45vw"
+            />
+          </div>
           <span className="eyebrow">Guided by nature</span>
           <h3>
-            Less noise.
+            Closer to nature.
             <br />
-            More <em>feeling.</em>
+            More <em>involved.</em>
           </h3>
           <ArrowUpRight className="language-arrow" size={34} />
         </div>

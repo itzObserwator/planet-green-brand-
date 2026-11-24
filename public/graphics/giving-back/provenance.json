@@ -1,0 +1,39 @@
+{
+  "title": "Planet Green — The Act of Giving Back",
+  "generator": "built-in GPT image-generation tool; exact model version not exposed",
+  "master": "A — explicitly approved by user",
+  "companions": "Generated with the approved master as the image reference; reviewed for visual consistency",
+  "reference": "Existing Planet Green botanical engraving",
+  "palette": [
+    "#156B37",
+    "#50AD47",
+    "#B5D5A1",
+    "#E8F0E1"
+  ],
+  "files": [
+    "master",
+    "receive",
+    "realise",
+    "restore",
+    "seedling"
+  ],
+  "editing": "Alpha-preserving resizing and WebP encoding only; no programmed primary illustrations",
+  "prompts": [
+    {
+      "id": "receive",
+      "prompt": "Use case: illustration-story. Asset type: a transparent raster component in Planet Green's The Act of Giving Back identity. The selected master illustration is the authoritative reference for engraving detail, green palette, lighting, texture and anatomy. Derive this companion from that reference; do not invent a different visual style. Preserve Forest #156B37, Living Green #50AD47, Leaf #B5D5A1 and Mist #E8F0E1 with subtle green tonal shading. Premium commissioned botanical engraving and delicate green pigment wash, fine natural detail, sculptural believable forms. True transparent background, comfortable transparent margins. No text, watermark, logos, religious symbols, lotus, mandala, recycling icon, circular arrows, plastic 3D, flat clip art, decorative particles or unrelated dominant colours. Isolate and develop the master artwork's graceful upper-left botanical canopy as a standalone curved leaf illustration. Retain the same leaf venation, broad expressive silhouette, restrained depth and natural asymmetry. Nature provides: one readable canopy, no hand or seedling, no ring or globe. Match the reference's visual weight and include its subtle pale-green light across the upper leaf."
+    },
+    {
+      "id": "realise",
+      "prompt": "Use case: illustration-story. Asset type: a transparent raster component in Planet Green's The Act of Giving Back identity. The selected master illustration is the authoritative reference for engraving detail, green palette, lighting, texture and anatomy. Derive this companion from that reference; do not invent a different visual style. Preserve Forest #156B37, Living Green #50AD47, Leaf #B5D5A1 and Mist #E8F0E1 with subtle green tonal shading. Premium commissioned botanical engraving and delicate green pigment wash, fine natural detail, sculptural believable forms. True transparent background, comfortable transparent margins. No text, watermark, logos, religious symbols, lotus, mandala, recycling icon, circular arrows, plastic 3D, flat clip art, decorative particles or unrelated dominant colours. Derive the master's right-hand transition between diffused pale-green light, translucent waterlike flow and botanical grain. One coherent organic form, open and asymmetrical, softly illuminated within the material. The recognition of interdependence, without an orb or literal sun. No hand, no circle or swoosh, no giant leaf added. Preserve the reference's fine organic texture and fluid material transitions."
+    },
+    {
+      "id": "restore",
+      "prompt": "Use case: illustration-story. Asset type: a transparent raster component in Planet Green's The Act of Giving Back identity. The selected master illustration is the authoritative reference for engraving detail, green palette, lighting, texture and anatomy. Derive this companion from that reference; do not invent a different visual style. Preserve Forest #156B37, Living Green #50AD47, Leaf #B5D5A1 and Mist #E8F0E1 with subtle green tonal shading. Premium commissioned botanical engraving and delicate green pigment wash, fine natural detail, sculptural believable forms. True transparent background, comfortable transparent margins. No text, watermark, logos, religious symbols, lotus, mandala, recycling icon, circular arrows, plastic 3D, flat clip art, decorative particles or unrelated dominant colours. Derive the master's supporting hand and tiny two-leaf seedling as a standalone composition. Keep the same three-quarter palm-up perspective, anatomically believable fingers, natural nails and subtle green-tinted engraved skin. The hand gently cups a tiny living soil patch supporting the seedling. Preserve emotional warmth and the seedling's small scale relative to the hand. No canopy, no ring, no extra hand or fingers."
+    },
+    {
+      "id": "seedling",
+      "prompt": "Use case: illustration-story. Asset type: a transparent raster component in Planet Green's The Act of Giving Back identity. The selected master illustration is the authoritative reference for engraving detail, green palette, lighting, texture and anatomy. Derive this companion from that reference; do not invent a different visual style. Preserve Forest #156B37, Living Green #50AD47, Leaf #B5D5A1 and Mist #E8F0E1 with subtle green tonal shading. Premium commissioned botanical engraving and delicate green pigment wash, fine natural detail, sculptural believable forms. True transparent background, comfortable transparent margins. No text, watermark, logos, religious symbols, lotus, mandala, recycling icon, circular arrows, plastic 3D, flat clip art, decorative particles or unrelated dominant colours. Derive only the master's delicate two-leaf seedling and very small soil patch as a clean standalone detail. Preserve its exact botanical character, engraved veins, slender stem, natural asymmetry, lighting and green colour treatment. No hand, canopy, ribbon, ring or other object."
+    }
+  ]
+}

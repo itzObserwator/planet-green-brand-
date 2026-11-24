@@ -1,0 +1,761 @@
+.artwork {
+  display: block;
+  min-width: 0;
+  width: 100%;
+}
+.artwork > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.chapter,
+.library,
+.applications {
+  --gb-forest: #156b37;
+  --gb-leaf: #b5d5a1;
+  --gb-mist: #e8f0e1;
+  --gb-ink: #1a1a1a;
+  color: var(--gb-ink);
+  font-family: Outfit, Arial, sans-serif;
+}
+.chapter {
+  background: #fff;
+  border-radius: 44px;
+  padding: 65px 7% 45px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  scroll-margin-top: 35px;
+}
+.chapterTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.eyebrow {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.chapter a,
+.library a {
+  text-underline-offset: 5px;
+}
+.chapterTop > a {
+  text-decoration: underline;
+}
+.storyHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 90px 0 50px;
+}
+.chapter .heading,
+.library .heading,
+.applications .heading {
+  font-family: Outfit, Arial, sans-serif;
+  font-size: clamp(40px, 4.8vw, 76px);
+  line-height: 1.08;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+.heading > span {
+  color: #156b37;
+}
+.storyHeader > p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 5px;
+  flex-shrink: 0;
+}
+.stageCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+.stageCards > button {
+  position: relative;
+  padding: 22px 22px 25px;
+  background: white;
+  color: #1a1a1a;
+  border: 1px solid #156b3728;
+  border-radius: 28px;
+  font:
+    400 22px/1.3 Outfit,
+    Arial,
+    sans-serif;
+  cursor: pointer;
+  text-align: left;
+}
+.stageCards > button[aria-pressed="true"] {
+  border-color: #156b37;
+  background: linear-gradient(145deg, #e8f0e14d, #fff);
+  box-shadow: inset 0 0 0 1px #156b37;
+}
+.stageCards .artwork {
+  transition: transform 700ms cubic-bezier(0.22, 0.7, 0.2, 1);
+}
+.stageCards > button:hover .artwork {
+  transform: translateY(-6px);
+}
+.stageCards > button > span {
+  display: block;
+  margin-top: 18px;
+}
+.stageFoot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 35px 0 45px;
+  min-height: 100px;
+}
+.chapter .stageFoot h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+.stageFoot p {
+  font-size: 16px;
+  max-width: 530px;
+  margin: 0;
+}
+.motionControls {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.pill,
+.motionControls button,
+.formatControls button {
+  border: 1px solid #156b3740;
+  background: white;
+  color: #156b37;
+  border-radius: 30px;
+  padding: 11px 17px;
+  min-height: 44px;
+  font:
+    500 14px/1.3 Outfit,
+    Arial,
+    sans-serif;
+  cursor: pointer;
+}
+.motionControls button[aria-pressed="true"],
+.formatControls button[aria-pressed="true"] {
+  background: #156b37;
+  color: white;
+  border-color: #156b37;
+}
+.motionControls button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.designDetails {
+  border-top: 1px solid #156b3728;
+  padding: 22px 0 0;
+}
+.designDetails > summary {
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.inspector {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 7%;
+  align-items: center;
+  margin: 45px 0 30px;
+}
+.inspectorArt {
+  position: relative;
+}
+.inspectorRegion {
+  position: absolute;
+  border: 1px solid #156b37;
+  outline: 5px solid #ffffff60;
+  border-radius: 18px;
+  pointer-events: none;
+  transition: all 500ms cubic-bezier(0.22, 0.7, 0.2, 1);
+}
+.partControls {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.partControls > button {
+  background: white;
+  border: 1px solid #156b3740;
+  border-radius: 30px;
+  min-height: 44px;
+  padding: 10px 15px;
+  color: #156b37;
+  font:
+    400 14px/1.3 Outfit,
+    Arial,
+    sans-serif;
+  cursor: pointer;
+}
+.partControls > button[aria-pressed="true"] {
+  background: #156b37;
+  color: white;
+}
+.chapter .partMeaning h3,
+.library .partMeaning h3 {
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin: 28px 0 15px;
+}
+.partMeaning {
+  min-height: 190px;
+}
+.partMeaning p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 430px;
+  margin: 0;
+}
+.designNote {
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 780px;
+}
+.library {
+  padding: 55px 0;
+}
+.libraryHeading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+.library .heading,
+.applications .heading {
+  font-size: clamp(36px, 4vw, 60px);
+  margin-top: 16px;
+}
+.libraryHeading p:not(.eyebrow) {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+.libraryHeading > .pill {
+  flex-shrink: 0;
+}
+.libraryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 25px;
+}
+.libraryGrid article {
+  min-width: 0;
+}
+.specimen {
+  background: #fff;
+  border: 1px solid #156b3728;
+  border-radius: 28px;
+  padding: 25px;
+}
+.specimen[data-dark="true"] {
+  background: #156b37;
+}
+.libraryGrid h3 {
+  font:
+    500 18px/1.3 Outfit,
+    Arial,
+    sans-serif;
+  overflow-wrap: anywhere;
+  letter-spacing: -0.02em;
+  margin: 20px 0 10px;
+}
+.libraryGrid p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+}
+.assetLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  align-items: center;
+}
+.assetLinks a {
+  text-decoration: underline;
+}
+.assetLinks button {
+  border: 0;
+  background: none;
+  color: #156b37;
+  padding: 7px 0;
+  min-height: 38px;
+  font:
+    400 14px Outfit,
+    Arial,
+    sans-serif;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+.copyStatus {
+  font-size: 14px;
+  min-height: 24px;
+  margin: 35px 0;
+}
+.library .designDetails {
+  margin-bottom: 65px;
+}
+.library pre {
+  max-width: 100%;
+  overflow-x: auto;
+  background: #1a1a1a;
+  color: white;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 25px;
+  line-height: 1.7;
+  margin-top: 25px;
+}
+.guidance {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin: 40px 0 70px;
+}
+.guidance p {
+  font-size: 15px;
+  line-height: 1.65;
+}
+.guidance strong {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.downloadFooter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 50px;
+  border-top: 1px solid #156b3728;
+  padding-top: 35px;
+  font-size: 14px;
+}
+.downloadFooter .pill {
+  text-decoration: none;
+  background: #156b37;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+.downloadFooter > p {
+  width: 100%;
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 0;
+}
+.applications {
+  padding: 65px 5%;
+  background: white;
+  border-radius: 38px;
+  margin: 40px 0;
+}
+.compactApplications {
+  padding: 0;
+  margin-top: 60px;
+}
+.formatControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+.applicationStage {
+  position: relative;
+  min-height: 570px;
+  display: grid;
+  place-items: center;
+  background: #e8f0e1;
+  border-radius: 28px;
+  padding: 45px;
+  overflow: hidden;
+}
+.applicationPrint {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 950px;
+  background: #fff;
+  border-radius: 16px;
+  min-height: 430px;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 1fr 24px;
+  gap: 20px 30px;
+  box-shadow: 0 20px 45px #156b371a;
+}
+.applicationPrint > .brandLogo {
+  width: 150px;
+}
+.applicationPrint > img {
+  width: 150px;
+  height: auto;
+  grid-column: 1/-1;
+  align-self: start;
+}
+.applicationCopy {
+  align-self: center;
+}
+.applicationCopy > span {
+  font-size: 13px;
+  color: #156b37;
+}
+.applications .applicationCopy h3 {
+  font:
+    400 clamp(30px, 3.1vw, 48px)/1.06 Outfit,
+    Arial,
+    sans-serif;
+  letter-spacing: -0.05em;
+  margin: 20px 0;
+}
+.applicationCopy > p {
+  font-size: 14px;
+  margin: 0;
+}
+.applicationArt {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  max-width: 360px;
+  justify-self: center;
+  animation: art-enter 700ms cubic-bezier(0.22, 0.7, 0.2, 1) both;
+}
+.applicationCaption {
+  font-size: 12px;
+  grid-column: 1/-1;
+  align-self: end;
+}
+.applicationStage[data-format="editorial"] .applicationArt {
+  max-width: 340px;
+}
+.applicationStage[data-format="social"] .applicationPrint,
+.applicationStage[data-format="poster"] .applicationPrint {
+  max-width: 450px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  border-radius: 0;
+  padding: 35px;
+}
+.applicationStage[data-format="social"] .applicationArt,
+.applicationStage[data-format="poster"] .applicationArt {
+  grid-column: 1;
+  grid-row: 3;
+  width: 80%;
+}
+.applicationStage[data-format="social"] .applicationPrint {
+  border-radius: 24px;
+}
+.applicationStage[data-format="presentation"] .applicationPrint {
+  max-width: 100%;
+  min-height: 480px;
+}
+.applicationStage[data-format="card"] .applicationPrint {
+  background: linear-gradient(130deg, #e8f0e1, #b5d5a1);
+  border: 1px solid white;
+  border-radius: 30px;
+  min-height: 380px;
+  max-width: 740px;
+  transform: rotate(-3deg);
+}
+.applicationStage[data-format="packaging"] {
+  min-height: 650px;
+  perspective: 1200px;
+}
+.applicationStage[data-format="packaging"] .applicationPrint {
+  width: 440px;
+  max-width: 80%;
+  min-height: 470px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 15px;
+  border: 1px solid #156b3720;
+  border-radius: 2px;
+  transform: rotateY(-13deg) rotateX(12deg) rotate(-5deg);
+  box-shadow:
+    14px 17px 0 #b5d5a1,
+    28px 30px 28px #156b3728;
+}
+.applicationStage[data-format="packaging"] .applicationArt {
+  grid-row: 3;
+  grid-column: 1;
+  width: 70%;
+  max-width: 230px;
+}
+.applicationStage[data-format="packaging"] .applicationCopy h3 {
+  font-size: 32px;
+}
+.packageTag {
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  width: 140px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #156b3730;
+  box-shadow: 8px 12px 15px #156b3720;
+  transform: rotate(9deg);
+  font-size: 16px;
+  line-height: 1.15;
+}
+.packageTag > .artwork {
+  width: 85px;
+}
+.applicationNote {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+:is(.chapter, .library, .applications) :is(button, a, summary):focus-visible {
+  outline: 3px solid #156b37;
+  outline-offset: 5px;
+}
+@keyframes art-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1000px) {
+  .storyHeader {
+    display: block;
+  }
+  .storyHeader > p {
+    margin-top: 25px;
+  }
+  .stageCards {
+    gap: 16px;
+  }
+  .stageCards > button {
+    padding: 18px;
+  }
+  .stageFoot {
+    align-items: flex-start;
+  }
+  .libraryGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .applicationPrint {
+    padding: 25px;
+    gap: 15px;
+  }
+  .applicationStage {
+    padding: 30px;
+  }
+  .guidance {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+@media (max-width: 700px) {
+  .chapter {
+    padding: 45px 25px 30px;
+    border-radius: 28px;
+  }
+  .eyebrow {
+    font-size: 12px;
+  }
+  .chapterTop {
+    font-size: 13px;
+    gap: 16px;
+  }
+  .storyHeader {
+    margin: 60px 0 30px;
+  }
+  .chapter .heading {
+    font-size: 40px;
+  }
+  .storyHeader > p {
+    font-size: 16px;
+  }
+  .stageCards {
+    gap: 10px;
+  }
+  .stageCards > button {
+    padding: 10px 8px 14px;
+    border-radius: 18px;
+    font-size: 15px;
+  }
+  .stageCards > button > span {
+    margin-top: 8px;
+  }
+  .stageFoot {
+    display: block;
+    margin-top: 30px;
+  }
+  .chapter .stageFoot h3 {
+    font-size: 27px;
+  }
+  .stageFoot p {
+    font-size: 15px;
+  }
+  .motionControls {
+    margin-top: 22px;
+  }
+  .inspector {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 25px;
+  }
+  .inspectorArt {
+    width: 100%;
+    max-width: 430px;
+    margin: auto;
+  }
+  .partMeaning {
+    min-height: 180px;
+  }
+  .chapter .partMeaning h3,
+  .library .partMeaning h3 {
+    font-size: 29px;
+  }
+  .partMeaning p {
+    font-size: 15px;
+  }
+  .partControls {
+    gap: 8px;
+  }
+  .partControls > button {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+  .designDetails > summary {
+    font-size: 14px;
+  }
+  .library {
+    padding-top: 35px;
+  }
+  .libraryHeading {
+    display: block;
+  }
+  .libraryHeading > .pill {
+    margin-top: 20px;
+  }
+  .libraryGrid {
+    grid-template-columns: 1fr;
+  }
+  .libraryGrid h3 {
+    font-size: 20px;
+  }
+  .specimen {
+    padding: 30px;
+  }
+  .specimen > .artwork {
+    max-width: 350px;
+    margin: auto;
+  }
+  .library pre {
+    padding: 18px;
+    font-size: 12px;
+  }
+  .applications {
+    padding: 40px 20px;
+    border-radius: 28px;
+  }
+  .compactApplications {
+    padding: 0;
+  }
+  .applicationStage {
+    padding: 25px 15px;
+    min-height: 600px;
+    border-radius: 20px;
+  }
+  .applicationPrint {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    padding: 25px;
+    min-height: 520px;
+  }
+  .applicationArt {
+    grid-column: 1;
+    grid-row: 3;
+    max-width: 250px;
+  }
+  .applications .applicationCopy h3 {
+    font-size: 34px;
+  }
+  .applicationCaption {
+    font-size: 11px;
+  }
+  .applicationStage[data-format="presentation"] .applicationPrint {
+    min-height: 520px;
+  }
+  .applicationStage[data-format="card"] .applicationPrint {
+    min-height: 510px;
+    transform: none;
+  }
+  .applicationStage[data-format="packaging"] {
+    min-height: 620px;
+  }
+  .applicationStage[data-format="packaging"] .applicationPrint {
+    max-width: 85%;
+    min-height: 460px;
+    padding: 22px;
+  }
+  .applicationStage[data-format="packaging"] .applicationCopy h3 {
+    font-size: 28px;
+  }
+  .packageTag {
+    width: 100px;
+    font-size: 14px;
+    right: 1%;
+    bottom: 6%;
+  }
+  .packageTag > .artwork {
+    width: 65px;
+  }
+  .formatControls {
+    gap: 8px;
+  }
+  .formatControls button {
+    font-size: 13px;
+    padding: 10px 13px;
+  }
+  .downloadFooter {
+    gap: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stageCards .artwork,
+  .inspectorRegion {
+    transition: none;
+  }
+  .applicationArt {
+    animation: none;
+  }
+}
+/* Switch ink and surface together to retain contrast throughout state changes. */
+.chapter .partControls > button,
+.chapter .motionControls > button,
+.library .partControls > button,
+.library .formatControls > button,
+.applications .formatControls > button {
+  transition:
+    transform 400ms cubic-bezier(0.22, 0.7, 0.2, 1),
+    box-shadow 300ms;
+}

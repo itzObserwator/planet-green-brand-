@@ -24,7 +24,12 @@ export function GlassCard({
 }: GlassCardProps) {
   return (
     <div
-      className={cn("glass-card", hover && "glass-hover", className)}
+      className={cn(
+        "glass-card",
+        "liquid-glass",
+        hover && "glass-hover",
+        className,
+      )}
       style={
         { ...style, ...(tint ? { "--glass-tint": tint } : {}) } as CSSProperties
       }
@@ -93,12 +98,14 @@ export function GlassImageFrame({
   );
 }
 export interface GlassModalProps {
+  className?: string;
   open: boolean;
   onClose: () => void;
   title: string;
   children: ReactNode;
 }
 export function GlassModal({
+  className,
   open,
   onClose,
   title,
@@ -121,7 +128,7 @@ export function GlassModal({
   return (
     <dialog
       ref={ref}
-      className="glass-modal"
+      className={cn("glass-modal", className)}
       aria-labelledby={titleId}
       onCancel={onClose}
       onClick={(e) => {

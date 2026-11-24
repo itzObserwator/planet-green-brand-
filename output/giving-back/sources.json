@@ -1,0 +1,11 @@
+{
+  "masterApproved": "A, explicitly approved by user",
+  "generator": "built-in GPT image-generation tool; exact model version not exposed",
+  "sources": {
+    "master": "output/giving-back/candidates/master-a.png",
+    "receive": "output/giving-back/companions/receive.png",
+    "realise": "output/giving-back/companions/realise.png",
+    "restore": "output/giving-back/companions/restore.png",
+    "seedling": "output/giving-back/companions/seedling.png"
+  }
+}

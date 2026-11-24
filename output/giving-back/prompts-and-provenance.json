@@ -1,0 +1,33 @@
+{
+  "status": "Master A approved and selected for the website",
+  "generator": "built-in image_gen tool",
+  "modelVersion": "Not exposed by the tool; exact GPT image 2.6 version unverified",
+  "reference": "public/graphics/engraved/life.png",
+  "recommended": "A",
+  "candidates": [
+    {
+      "id": "A",
+      "source": "candidates/master-a.png",
+      "web": "candidates/master-a.webp",
+      "prompt": "Use case: illustration-story. Asset type: master brand illustration, candidate A, for Planet Green's 'The Act of Giving Back'. Create one exceptional commissioned-quality editorial illustration, no text or branding within artwork. The supplied plant engraving is a STYLE AND COLOUR REFERENCE ONLY: retain its delicate botanical engraving craftsmanship and green ink tonal depth, do not copy the plant layout.\nCompose five subjects as ONE balanced, almost circular but asymmetrical open narrative, with generous clear negative space in the centre. A majestic single broad botanical leaf canopy with believable intricate veins curls across the upper left. Soft pale green-white diffused illumination at the upper right implies understanding without a sun icon or golden orb. A translucent, finely textured water-and-air-like organic fold descends along the right side and bends toward the base, connecting the leaf to humanity's returning care, never an arrow or circular stroke. Along the bottom, one graceful anatomically believable human hand is viewed palm-up in three-quarter side view, softly cupped, five anatomically correct digits naturally overlapping in perspective. The wrist enters from lower left and fingers support a tiny two-leaf seedling at lower centre. The seedling grows from a very small living soil patch held by the hand. Make the hand green-tinted engraved natural illustration, not a flat icon, literal photo or plastic object. Beautifully restrained layered material transitions, fine intaglio botanical linework and soft green wash, natural shadows and tactile surface. Nature gives, humanity recognises, humanity restores: subtly visible in one continuous composition.\nPalette: Forest #156B37, living green #50AD47, leaf #B5D5A1, Mist #E8F0E1 with only subtle tonal shading and neutral highlights. No pink, purple, blue, orange or dominant yellow. Indian sensibility comes from interdependence and respectful care, no religious motifs. Premium contemporary, minimal silhouette with rich detail, NOT an eco logo or generic clip art. Leave generous transparent margin and real transparent centre/negative space; do not add a white disc or rectangle. Need true alpha background so artwork works on white and forest-green backgrounds. High-resolution square composition. No words, logos, lettering, watermarks, lotus, mandala, religious symbols, recycling graphics, border ring, circular arrow, stock icon, extra hands, extra fingers, particles, dramatic glow or decorative flourishes."
+    },
+    {
+      "id": "B",
+      "source": "candidates/master-b.png",
+      "web": "candidates/master-b.webp",
+      "prompt": "Use case: illustration-story. Asset type: alternate master brand illustration, candidate B for Planet Green, 'The Act of Giving Back'. Generate a single premium commissioned editorial artwork with true transparent background, no text. Input image is a STYLE/PALETTE REFERENCE ONLY: green botanical engraving, delicate natural veins, restrained craft; create an original composition.\nAn asymmetrical, near-circular OPEN composition unifies nature's generosity with humanity's return of care. In the upper left, ONE gracefully curved oversized translucent broad leaf canopy, sculptural but botanically believable, intricate veins and finely engraved texture. Upper right is a very restrained diffusion of pale sage-white light, integrated with the leaf edge, NOT a glowing orb or literal sun. On the right, one thin translucent waterlike organic ribbon with botanical internal grain bends down toward the base, forming a slow continuous narrative. Across lower centre, one graceful anatomically correct human hand in profile, palm gently cupped, naturally overlapping fingers, subtle knuckles and nails. The hand curves under a tiny two-leaf seedling on a small soil fragment, extending toward a younger returning botanical shoot. Leave significant negative space between upper leaf and lower hand; the tiny living seedling is the emotional focus. Strong carefully controlled hierarchy and visual continuity; DON'T turn the design into a wreath, globe badge, closed ring or circular border. Visual sensibility: contemporary Indian nature brand, interdependent life and respectful offering without literal spiritual symbols. More open and sculptural than a dense botanical specimen: fewer overlapping parts, expressive silhouettes, refined engraved contours softened with luminous layered colour, tactile green pigment, quiet material depth. Not flat vector, not plastic 3D, not generic AI eco clip art.\nStrict palette: #156B37 deep forest, #50AD47 living green, #B5D5A1 leaf and #E8F0E1 mist with neutral highlights, shading only within these green families. No pink, lilac, purple, orange, blue, yellow glow, gold or dominant colours beyond green. True alpha outside AND through the open centre, no white disc. Square high-resolution, entire artwork inside the canvas with generous transparent margins, refined sharp contours. No text, lettering, watermark, lotus, mandala, temple, religious icon, recycling arrow, swoosh, particles, multiple hands, extra fingers or disconnected decorative flourishes."
+    }
+  ],
+  "constraints": {
+    "transparent": true,
+    "palette": [
+      "#156B37",
+      "#50AD47",
+      "#B5D5A1",
+      "#E8F0E1"
+    ],
+    "existingWebsite": "unchanged",
+    "companionGeneration": "after master approval"
+  },
+  "selected": "A"
+}
